@@ -21,24 +21,26 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 				c = append(c, nums2[j])
 				j = j + 1
 			}
-			if len(c) == numLen/2+1 {
-				return float64(c[len(c)-1]+c[len(c)-2]) / 2.0
-			}
+			//if len(c) == numLen/2+1 {
+			//	return float64(c[len(c)-1]+c[len(c)-2]) / 2.0
+			//}
 		}
 		for i < len(nums1) {
 			c = append(c, nums1[i])
 			i = i + 1
-			if len(c) == numLen/2+1 {
-				return float64(c[len(c)-1]+c[len(c)-2]) / 2.0
-			}
+			//if len(c) == numLen/2+1 {
+			//	return float64(c[len(c)-1]+c[len(c)-2]) / 2.0
+			//}
 		}
 		for j < len(nums2) {
 			c = append(c, nums2[j])
 			j = j + 1
-			if len(c) == numLen/2+1 {
-				return float64(c[len(c)-1]+c[len(c)-2]) / 2.0
-			}
+			//if len(c) == numLen/2+1 {
+			//	return float64(c[len(c)-1]+c[len(c)-2]) / 2.0
+			//}
 		}
+
+		return float64(c[numLen/2 ]+c[numLen/2-1]) / 2.0
 
 	} else {
 		// TODO: mid is numLen / 2
@@ -50,27 +52,26 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 				c = append(c, nums2[j])
 				j = j + 1
 			}
-			if len(c) == numLen/2+1 {
-				return float64(c[len(c)-1])
-			}
+			//if len(c) == numLen/2+1 {
+			//	return float64(c[len(c)-1])
+			//}
 		}
 		for i < len(nums1) {
 			c = append(c, nums1[i])
 			i = i + 1
-			if len(c) == numLen/2+1 {
-				return float64(c[len(c)-1])
-			}
+			//if len(c) == numLen/2+1 {
+			//	return float64(c[len(c)-1])
+			//}
 		}
 		for j < len(nums2) {
 			c = append(c, nums2[j])
 			j = j + 1
-			if len(c) == numLen/2+1 {
-				return float64(c[len(c)-1])
-			}
+			//if len(c) == numLen/2+1 {
+			//	return float64(c[len(c)-1])
+			//}
 		}
+		return float64(c[numLen/2])
 	}
-
-	return float64(0)
 
 }
 
