@@ -46,9 +46,16 @@ func threeSum(nums []int) [][]int {
 				l++
 				r--
 			} else if sum < 0 {
+				for l < r && nums[l] == nums[l+1] {
+					l++
+				}
+
 				//	如果 sum < 0 则 l 需要往右边移动 数字才会增大 sum 才有可能等于 0
 				l++
 			} else {
+				for l < r && nums[r] == nums[r-1] {
+					r--
+				}
 				r--
 			}
 
@@ -61,4 +68,5 @@ func threeSum(nums []int) [][]int {
 
 func main() {
 	fmt.Println(threeSum([]int{-1, 0, 1, 2, -1, -4}))
+	fmt.Println(threeSum([]int{-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0}))
 }
