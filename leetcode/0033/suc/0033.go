@@ -24,7 +24,7 @@ func search(nums []int, target int) int {
 			}
 		} else {
 			// 左边是有序的
-			if nums[l] <= target && target < nums[mid]   {
+			if nums[l] <= target && target < nums[mid] {
 				r = mid - 1
 			} else {
 				l = mid + 1
@@ -38,5 +38,5 @@ func search(nums []int, target int) int {
 
 func main() {
 	fmt.Println(search([]int{4, 5, 6, 7, 0, 1, 2}, 0))
-	fmt.Println(search([]int{4,5,6,7,0,1,2},3))
+	fmt.Println(search([]int{4, 5, 6, 7, 0, 1, 2}, 3))
 }

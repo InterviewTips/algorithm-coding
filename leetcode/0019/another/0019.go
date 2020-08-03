@@ -26,7 +26,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
 func main() {
 	nodeList := &ListNode{
-		Val: 1,
+		Val:  1,
 		Next: nil,
 	}
 	l := removeNthFromEnd(nodeList, 1)
