@@ -10,7 +10,7 @@ select tmp.id, s.visit_date, s.people from
 (select id,
 -- # 前两天
 if (
-    (select people from stadium as b where b.id = a.id-2) >= 100,
+    (select people from stadium as b where b.id = a.id-2) >= 100, -- 边界问题 1-2 = -1, 问题不大，此时 if 结果为 0
     1,
     0
 ) as b2,
