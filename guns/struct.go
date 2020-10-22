@@ -14,3 +14,17 @@ type ListNode struct {
 	Val  int
 	Next *ListNode
 }
+
+//GenLinkList
+func GenLinkList(nodes []int) *ListNode {
+	p := &ListNode{}
+	q := p
+	for i := 0; i < len(nodes); i++ {
+		q.Next = &ListNode{
+			Val:  nodes[i],
+			Next: nil,
+		}
+		q = q.Next
+	}
+	return p.Next
+}
