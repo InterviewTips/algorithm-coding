@@ -1,29 +1,31 @@
 package _024
 
-import (
-	"sort"
-)
+import "fmt"
 
 func videoStitching(clips [][]int, T int) int {
 	// sort
-	sort.SliceStable(clips, func(i, j int) bool {
-		return clips[i][0] < clips[j][0] || (clips[i][0] == clips[j][0] && clips[i][1] > clips[j][1])
-	})
-	//fmt.Printf("%v\n", clips)
-	if clips[0][0] != 0 {
-		return -1
-	}
-	start := clips[0]
-	count := 1
-	for i := 1; i < len(clips); i++ {
-		if (clips[i][0] <= start[1]) &&
-			(clips[i][1] > start[1]) {
-			count += 1
-			start = clips[i]
-			if clips[i][1] >= T {
-				return count
-			}
+	maxn := make([]int, T) //记录同一左端点，距离最远的右端点数组
+	last, pre := 0, 0
+	for i := 0; i < len(clips); i++ {
+		l, r := clips[i][0], clips[i][1]
+		if l < T && r > maxn[l] {
+			maxn[l] = r
 		}
 	}
-	return -1
+	fmt.Printf("%v\n", maxn)
+	count := 0
+	for i, v := range maxn {
+		if v > last {
+			last = v
+		}
+		if i == last {
+			return -1
+		}
+		if i == pre { //区间用完了，开启下一个区间
+			count++
+			pre = last
+		}
+	}
+
+	return count
 }
