@@ -11,5 +11,18 @@
 
 #### 二分查找
 
-- 区间的重要性
-- middle 计算要防止溢出 `(left + right)/2`  如果两个数字很大有可能会溢出，所以可以使用 `left + ((right - left) >> 2)`
+| 最近提交时间 | 题目                                                         | 题目难度 | 提交次数 |
+| :----------- | :----------------------------------------------------------- | :------- | :------- |
+| 44 分钟前    | [#367 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) | 简单     | 1 次     |
+| 1 小时前     | [#69 x 的平方根](https://leetcode-cn.com/problems/sqrtx/)    | 简单     | 5 次     |
+| 1 小时前     | [#34 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 中等     | 2 次     |
+| 2 小时前     | [#35 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | 简单     | 3 次     |
+| 2 小时前     | [#704 二分查找](https://leetcode-cn.com/problems/binary-search/) | 简单     | 1 次     |
+
+简单总结：
+
+- 区间的重要性(左闭右闭还是左闭右开)
+- middle 计算要防止溢出 `(left + right)/2` 如果两个数字很大有可能会溢出，所以可以使用 `left + ((right - left) >> 2)`
+- 如果是要查找大于等于 target 的第一个索引，则最后 return left (可参考 34、35 题)
+- 如果是要查找小于等于 target 的最后一个索引，则最后 return right (可参考 69 题)
+
