@@ -4,6 +4,7 @@
 
 - [数组专题](#%E6%95%B0%E7%BB%84%E4%B8%93%E9%A2%98)
   - [二分查找](#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
+  - [移除元素](#%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -26,3 +27,16 @@
 - 如果是要查找大于等于 target 的第一个索引，则最后 return left (可参考 34、35 题)
 - 如果是要查找小于等于 target 的最后一个索引，则最后 return right (可参考 69 题)
 
+#### 移除元素
+
+| 最近提交时间 | 题目                                                         | 题目难度 | 提交次数 |
+| :----------- | :----------------------------------------------------------- | :------- | :------- |
+| 2 分钟前     | [#977 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/) | 简单     | 2 次     |
+| 1 天前       | [#844 比较含退格的字符串](https://leetcode-cn.com/problems/backspace-string-compare/) | 简单     | 2 次     |
+| 2 天前       | [#283 移动零](https://leetcode-cn.com/problems/move-zeroes/) | 简单     | 1 次     |
+| 2 天前       | [#26 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) | 简单     | 6 次     |
+| 2 天前       | [#27 移除元素](https://leetcode-cn.com/problems/remove-element/) | 简单     | 3 次     |
+
+简单总结：
+
+- 双指针的基本思路 多练习
