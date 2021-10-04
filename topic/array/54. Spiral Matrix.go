@@ -88,3 +88,44 @@ func spiralOrder(matrix [][]int) []int {
 
 	return res
 }
+
+func spiralOrder1(matrix [][]int) []int {
+	if len(matrix) == 0 || len(matrix[0]) == 0 {
+		return []int{}
+	}
+	m := len(matrix)
+	n := len(matrix[0])
+	res := make([]int, m*n)
+
+	top := 0
+	left := 0
+	bottom := m - 1
+	right := n - 1
+	index := 0
+	// 开始画圈
+	for index <= m*n-1 {
+		// 注意：for 循环中需要进行 && index <= m *n - 1 此限定条件 不然有可能会画多
+		for i := left; i <= right && index <= m*n-1; i++ {
+			res[index] = matrix[top][i]
+			index++
+		}
+		top++
+		for i := top; i <= bottom && index <= m*n-1; i++ {
+			res[index] = matrix[i][right]
+			index++
+		}
+		right--
+		for i := right; i >= left && index <= m*n-1; i-- {
+			res[index] = matrix[bottom][i]
+			index++
+		}
+		bottom--
+		for i := bottom; i >= top && index <= m*n-1; i-- {
+			res[index] = matrix[i][left]
+			index++
+		}
+		left++
+	}
+
+	return res
+}
