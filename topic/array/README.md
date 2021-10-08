@@ -6,6 +6,7 @@
   - [二分查找](#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
   - [移除元素](#%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0)
   - [滑动窗口](#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3)
+  - [模拟行为(螺旋矩阵)](#%E6%A8%A1%E6%8B%9F%E8%A1%8C%E4%B8%BA%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -53,3 +54,11 @@
 简单总结:
 
 - 双指针+哈希表
+
+#### 模拟行为(螺旋矩阵)
+
+| 最近提交时间 | 题目                                                         | 题目难度 | 提交次数 |
+| :----------- | :----------------------------------------------------------- | :------- | :------- |
+| 37 分钟前    | [#剑指 Offer 29 顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/) | 简单     | 2 次     |
+| 44 分钟前    | [#54 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) | 中等     | 3 次     |
+| 2 小时前     | [#59 螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) | 中等     | 1 次     |
