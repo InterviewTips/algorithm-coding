@@ -1,15 +1,10 @@
 package hashtable
 
-import (
-	"log"
-)
-
 func isHappy(n int) bool {
 	// 通过 map 记录出现过的 sum
 	sumMap := make(map[int]struct{})
 	for {
 		res := countNum(n)
-		log.Println(res)
 		if res == 1 {
 			return true
 		}
@@ -20,7 +15,6 @@ func isHappy(n int) bool {
 			sumMap[res] = struct{}{}
 			n = res
 		}
-		//time.Sleep(1*time.Second)
 	}
 }
 
