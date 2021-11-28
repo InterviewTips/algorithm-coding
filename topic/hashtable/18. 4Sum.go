@@ -13,12 +13,12 @@ func fourSum(nums []int, target int) [][]int {
 	sort.SliceStable(nums, func(i, j int) bool {
 		return nums[i] < nums[j]
 	})
-	for i := 0; i <= len(nums)-4; i++ {
+	for i := 0; i <= len(nums)-4; i++ { // i <= len(nums) - 4 要简单点就直接 i < len(nums)
 		num1 := nums[i]
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
-		for j := i + 1; j < len(nums); j++ { // j < len(nums) 而不是 j <= len(nums) - 4
+		for j := i + 1; j <= len(nums)-3; j++ { // j <= len(nums) - 3 边界条件 要简单点就 j < len(nums)
 			num2 := nums[j]
 			if j > i+1 && nums[j] == nums[j-1] {
 				continue
