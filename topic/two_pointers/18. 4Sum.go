@@ -11,9 +11,6 @@ func fourSum(nums []int, target int) [][]int {
 	}
 	sort.Ints(nums)
 	for i := 0; i < len(nums); i++ {
-		if nums[i] > target {
-			return res
-		}
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
