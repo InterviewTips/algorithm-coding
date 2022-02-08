@@ -32,7 +32,7 @@ func isValid(s string) bool {
 			}
 		}
 	}
-	if len(stack1) > 0 {
+	if len(stack1) > 0 { // 左边剩余括号
 		return false
 	}
 
