@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [algorithm-coding](#algorithm-coding)
+  - [致谢](#%E8%87%B4%E8%B0%A2)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -13,3 +14,7 @@
 语言: 包括但不限于 Java、Go、Python 等
 
 计划练习: LeetCode、剑指 Offer
+
+### 致谢
+
+[![JetBrains](img/jetbrains.png)](https://www.jetbrains.com/?from=algorithm-coding)
