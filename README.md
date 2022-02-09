@@ -17,4 +17,4 @@
 
 ### 致谢
 
-[![JetBrains](img/jetbrains.png)](https://www.jetbrains.com/?from=algorithm-coding)
+[<img src="img/jetbrains.png" alt="JetBrains" height="120" />](https://www.jetbrains.com/?from=algorithm-coding)
