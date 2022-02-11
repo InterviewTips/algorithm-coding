@@ -22,7 +22,9 @@ func TestCreateBinaryTree(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := CreateBinaryTree(tt.args.data)
-			LogTree(got)
+			PreOrder(got)
+			InOrder(got)
+			PostOrder(got)
 		})
 	}
 }

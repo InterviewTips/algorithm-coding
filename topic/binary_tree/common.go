@@ -45,12 +45,34 @@ func CreateBinaryTree(data []int) *TreeNode {
 	return head
 }
 
-//LogTree 中序遍历
-func LogTree(root *TreeNode) {
+//PreOrder 前序遍历
+func PreOrder(root *TreeNode) {
 	if root != nil {
-		LogTree(root.Left)
 		log.Println(root.Val)
-		LogTree(root.Right)
+		PreOrder(root.Left)
+		PreOrder(root.Right)
+	} else {
+		return
+	}
+}
+
+//PostOrder 后序遍历
+func PostOrder(root *TreeNode) {
+	if root != nil {
+		PostOrder(root.Left)
+		PostOrder(root.Right)
+		log.Println(root.Val)
+	} else {
+		return
+	}
+}
+
+//InOrder 中序遍历
+func InOrder(root *TreeNode) {
+	if root != nil {
+		InOrder(root.Left)
+		log.Println(root.Val)
+		InOrder(root.Right)
 	} else {
 		return
 	}
