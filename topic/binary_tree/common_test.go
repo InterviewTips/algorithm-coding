@@ -15,7 +15,7 @@ func TestCreateBinaryTree(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				data: []int{1, null, 2, 3},
+				data: []int{1, Null, 2, 3},
 			},
 		},
 	}

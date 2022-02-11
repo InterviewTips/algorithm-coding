@@ -1,8 +1,10 @@
-package binary_tree
+package iteration
 
 import (
 	"reflect"
 	"testing"
+
+	"github.com/InterviewTips/algorithm-coding/topic/binary_tree"
 )
 
 func Test_preorderTraversal(t *testing.T) {
@@ -17,7 +19,7 @@ func Test_preorderTraversal(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, Null, 2, 3}),
+				root: binary_tree.CreateBinaryTree([]int{1, binary_tree.Null, 2, 3}),
 			},
 			want: []int{1, 2, 3},
 		},

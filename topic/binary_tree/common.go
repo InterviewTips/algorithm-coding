@@ -11,8 +11,8 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// 如果要表示 nil，则使用 math.MinInt64
-var null = math.MinInt64
+// Null 如果要表示 nil，则使用 math.MinInt64
+var Null = math.MinInt64
 
 //CreateBinaryTree 构造二叉树 leetcode
 func CreateBinaryTree(data []int) *TreeNode {
@@ -28,13 +28,13 @@ func CreateBinaryTree(data []int) *TreeNode {
 		if tmp == nil { // 提前返回
 			return head
 		}
-		if data[index] != null { // -> left
+		if data[index] != Null { // -> left
 			node := &TreeNode{Val: data[index]}
 			tmp.Left = node
 			q.push(node) // add node
 		}
 		index++
-		if index < len(data) && data[index] != null { // -> right
+		if index < len(data) && data[index] != Null { // -> right
 			node := &TreeNode{Val: data[index]}
 			tmp.Right = node
 			q.push(node) // add node

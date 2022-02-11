@@ -17,7 +17,7 @@ func Test_postorderTraversal(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, null, 2, 3}),
+				root: CreateBinaryTree([]int{1, Null, 2, 3}),
 			},
 			want: []int{3, 2, 1},
 		},
