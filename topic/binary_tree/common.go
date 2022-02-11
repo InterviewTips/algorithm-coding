@@ -64,8 +64,8 @@ func (q *queue) pop() *TreeNode {
 	if q.empty() {
 		return nil
 	}
-	node := q.nodes[len(q.nodes)-1]
-	q.nodes = q.nodes[:len(q.nodes)-1]
+	node := q.nodes[0] // 取出首个元素
+	q.nodes = q.nodes[1:]
 	return node
 }
 
@@ -73,7 +73,7 @@ func (q *queue) front() *TreeNode {
 	if q.empty() {
 		return nil
 	}
-	node := q.nodes[len(q.nodes)-1]
+	node := q.nodes[0] // 取出首个元素
 	return node
 }
 
