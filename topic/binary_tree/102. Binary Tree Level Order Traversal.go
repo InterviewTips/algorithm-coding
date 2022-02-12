@@ -14,6 +14,7 @@ func levelOrder(root *TreeNode) [][]int {
 	for len(treeQueue) != 0 {
 		levelRes := make([]int, 0) // 其中一层 res
 		size := len(treeQueue)     // 先取出当前 queue 长度 其实就是需要将上一层的节点都取出来
+		// 不能直接使用 len(treeQueue) 的原因在于 treeQueue 的长度在下面会有变动
 		for i := 0; i < size; i++ {
 			// pop_front
 			node := treeQueue[0]
