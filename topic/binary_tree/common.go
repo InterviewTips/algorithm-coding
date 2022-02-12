@@ -14,6 +14,71 @@ type TreeNode struct {
 // Null 如果要表示 nil，则使用 math.MinInt64
 var Null = math.MinInt64
 
+type NTreeNode struct {
+	Val      int
+	Children []*NTreeNode
+}
+
+// CreateNTree 树的序列化输入是用层序遍历，每组子节点都由 null 值分隔 详情参考 unit test case
+func CreateNTree(data []int) *NTreeNode {
+	if len(data) == 0 {
+		return nil
+	}
+	treeQueue := make([]*NTreeNode, 0)
+	// push root to queue
+	head := &NTreeNode{Val: data[0], Children: make([]*NTreeNode, 0)}
+	treeQueue = append(treeQueue, head)
+	index := 1
+	for index < len(data) {
+		// 正常来讲这里 data[index] 就一定是 null
+		//if data[index] == Null { // 如果是 null 则结束此节点
+		// pop_front 然后进行节点 children 的加入
+		node := treeQueue[0]
+		treeQueue = treeQueue[1:]
+		index++
+		for index < len(data) && data[index] != Null {
+			tNode := &NTreeNode{Val: data[index], Children: make([]*NTreeNode, 0)}
+			node.Children = append(node.Children, tNode)
+			// push to queue
+			treeQueue = append(treeQueue, tNode)
+			index++
+		}
+		//} else { // != nil push node to queue
+		//	tNode := &NTreeNode{Val: data[index], Children: make([]*NTreeNode, 0)}
+		//	treeQueue = append(treeQueue, tNode)
+		//	index++
+		//}
+	}
+
+	return head
+}
+
+func LevelOrderLog(root *NTreeNode) {
+	if root == nil {
+		return
+	}
+	treeQueue := make([]*Node, 0)
+	// push root to queue
+	treeQueue = append(treeQueue, root)
+	for len(treeQueue) != 0 {
+		levelRes := make([]int, 0)
+		size := len(treeQueue)
+		for i := 0; i < size; i++ {
+			// pop_front
+			node := treeQueue[0]
+			treeQueue = treeQueue[1:]
+			// add children to queue
+			treeQueue = append(treeQueue, node.Children...)
+			// add node.Val to levelRes
+			levelRes = append(levelRes, node.Val)
+		}
+		// append levelRes to res
+		log.Println(levelRes)
+	}
+
+	return
+}
+
 //CreateBinaryTree 构造二叉树 leetcode
 func CreateBinaryTree(data []int) *TreeNode {
 	if len(data) == 0 {
