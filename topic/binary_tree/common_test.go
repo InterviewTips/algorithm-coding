@@ -19,6 +19,12 @@ func TestCreateBinaryTree(t *testing.T) {
 				data: []int{1, Null, 2, 3},
 			},
 		},
+		{
+			name: "two",
+			args: args{
+				data: []int{1, 2, 3, Null, Null, 4, 5},
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -80,6 +86,32 @@ func TestLevelOrderBinaryTree(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := LevelOrderBinaryTree(tt.args.root); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("LevelOrderBinaryTree() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestLevelOrderBinaryTreeAddNull(t *testing.T) {
+	type args struct {
+		root *TreeNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		{
+			name: "one",
+			args: args{
+				root: CreateBinaryTree([]int{3, 9, 20, Null, Null, 15, 7}),
+			},
+			want: []int{3, 9, 20, Null, Null, 15, 7},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := LevelOrderBinaryTreeAddNull(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("LevelOrderBinaryTreeAddNull() = %v, want %v", got, tt.want)
 			}
 		})
 	}

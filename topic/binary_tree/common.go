@@ -110,6 +110,45 @@ func CreateBinaryTree(data []int) *TreeNode {
 	return head
 }
 
+func LevelOrderBinaryTreeAddNull(root *TreeNode) []int {
+	res := make([]int, 0)
+	if root == nil {
+		return res
+	}
+	treeQueue := make([]*TreeNode, 0)
+	// push root to queue
+	treeQueue = append(treeQueue, root)
+	res = append(res, root.Val)
+	for len(treeQueue) != 0 {
+		size := len(treeQueue)
+		for i := 0; i < size; i++ {
+			// pop_front
+			node := treeQueue[0]
+			treeQueue = treeQueue[1:]
+			if node.Left != nil {
+				treeQueue = append(treeQueue, node.Left)
+				res = append(res, node.Left.Val)
+			} else {
+				res = append(res, Null)
+			}
+			if node.Right != nil {
+				treeQueue = append(treeQueue, node.Right)
+				res = append(res, node.Right.Val)
+			} else {
+				res = append(res, Null)
+			}
+		}
+	}
+	// 去除末尾的 null
+	for res[len(res)-1] == Null {
+		res = res[:len(res)-1]
+	}
+
+	return res
+}
+
+// LevelOrderBinaryTree
+// 没有考虑要输出 null 的情况 输出 null 的见 LevelOrderBinaryTreeAddNull
 func LevelOrderBinaryTree(root *TreeNode) []int {
 	res := make([]int, 0)
 	if root == nil {
@@ -130,7 +169,6 @@ func LevelOrderBinaryTree(root *TreeNode) []int {
 			if node.Right != nil {
 				treeQueue = append(treeQueue, node.Right)
 			}
-			// todo: 暂时没有考虑要输出 null 的情况
 			res = append(res, node.Val)
 		}
 	}
