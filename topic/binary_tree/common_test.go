@@ -1,6 +1,7 @@
 package binary_tree
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -54,6 +55,32 @@ func TestCreateNTree(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			got := CreateNTree(tt.args.data)
 			LevelOrderLog(got)
+		})
+	}
+}
+
+func TestLevelOrderBinaryTree(t *testing.T) {
+	type args struct {
+		root *TreeNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		{
+			name: "one",
+			args: args{
+				root: CreateBinaryTree([]int{1, Null, 2, 3}),
+			},
+			want: []int{1, 2, 3},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := LevelOrderBinaryTree(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("LevelOrderBinaryTree() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

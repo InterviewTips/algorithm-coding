@@ -93,7 +93,7 @@ func CreateBinaryTree(data []int) *TreeNode {
 		if tmp == nil { // 提前返回
 			return head
 		}
-		if data[index] != Null { // -> left
+		if index < len(data) && data[index] != Null { // -> left
 			node := &TreeNode{Val: data[index]}
 			tmp.Left = node
 			q.push(node) // add node
@@ -108,6 +108,34 @@ func CreateBinaryTree(data []int) *TreeNode {
 	}
 
 	return head
+}
+
+func LevelOrderBinaryTree(root *TreeNode) []int {
+	res := make([]int, 0)
+	if root == nil {
+		return res
+	}
+	treeQueue := make([]*TreeNode, 0)
+	// push root to queue
+	treeQueue = append(treeQueue, root)
+	for len(treeQueue) != 0 {
+		size := len(treeQueue)
+		for i := 0; i < size; i++ {
+			// pop_front
+			node := treeQueue[0]
+			treeQueue = treeQueue[1:]
+			if node.Left != nil {
+				treeQueue = append(treeQueue, node.Left)
+			}
+			if node.Right != nil {
+				treeQueue = append(treeQueue, node.Right)
+			}
+			// todo: 暂时没有考虑要输出 null 的情况
+			res = append(res, node.Val)
+		}
+	}
+
+	return res
 }
 
 //PreOrder 前序遍历
