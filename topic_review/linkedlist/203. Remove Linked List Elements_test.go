@@ -2,6 +2,7 @@ package linkedlist
 
 import (
 	"github.com/InterviewTips/algorithm-coding/guns"
+	"log"
 	"reflect"
 	"testing"
 )
@@ -27,7 +28,9 @@ func Test_removeElements(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := removeElements(tt.args.head, tt.args.val); !reflect.DeepEqual(got, tt.want) {
+			got := removeElements(tt.args.head, tt.args.val)
+			log.Printf("%p %p", tt.args.head, got) // 地址一致了
+			if !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("removeElements() = %v, want %v", got, tt.want)
 			}
 		})
