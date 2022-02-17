@@ -9,6 +9,14 @@
 
 ### 二叉树
 
+- 关于 leetcode 定义全局变量指针出现问题的解答
+
+```go
+// 如果定义了全局变量 测试样例并不会每次执行完就重置清空 所以有可能存在问题
+var prev *TreeNode
+func getMinimumDifference(root *TreeNode) int {
+    prev = nil // 或者就是每次先在入口重置一下
+```
 
 #### 致谢
 
