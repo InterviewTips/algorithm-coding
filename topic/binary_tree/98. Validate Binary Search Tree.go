@@ -1,7 +1,8 @@
 package binary_tree
 
 // 二叉搜索树 每个节点的值都不能重复
-func isValidBST(root *TreeNode) bool {
+// var isValidBST = isValidBSTIteration
+func isValidBSTIteration(root *TreeNode) bool {
 	// 利用性质 中序遍历有序
 	if root == nil {
 		return true
@@ -34,4 +35,31 @@ func isValidBST(root *TreeNode) bool {
 	}
 
 	return true
+}
+
+// 递归
+func isValidBST(root *TreeNode) bool {
+	return subIsValidBST(root, nil, nil) // 根节点没有上下界 所以传 nil
+}
+
+// 定义多一个上界和下界
+// root.Left 更新上界
+// root.Right 更新下界
+func subIsValidBST(root *TreeNode, upper, lower *int) bool { // 巧妙利用 *int 指针 不然就需要定义最大值最小值之类
+	if root == nil {
+		return true
+	}
+
+	if lower != nil && root.Val <= *lower {
+		return false
+	}
+
+	if upper != nil && root.Val >= *upper {
+		return false
+	}
+
+	left := subIsValidBST(root.Left, &root.Val, lower)   // 更新上界 都要比这个上界小
+	right := subIsValidBST(root.Right, upper, &root.Val) // 更新下界，都要比这个下界大
+
+	return left && right
 }
