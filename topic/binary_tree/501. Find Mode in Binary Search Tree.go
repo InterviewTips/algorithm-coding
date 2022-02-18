@@ -57,3 +57,9 @@ func findMode(root *TreeNode) []int {
 
 	return res
 }
+
+// var findMode = findModeBST
+// todo: 利用中序遍历有序特性 记住 pre + maxCount 即可
+func findModeBST(root *TreeNode) []int {
+	return nil
+}
