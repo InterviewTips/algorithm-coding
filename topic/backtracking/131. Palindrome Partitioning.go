@@ -17,11 +17,10 @@ func partition(s string) [][]string {
 
 		for i := 0; i < len(sVar); i++ {
 			newValue := sVar[:i+1]
-			//log.Println("newValue is", newValue)
 			if !isPalindrome(newValue) { // 不是回文字符串
 				continue
 			}
-			newSVar := sVar[i+1:]
+			newSVar := sVar[i+1:] // 不断切割 传入新的 str value
 			path = append(path, newValue)
 			backtracking(newSVar)
 			path = path[:len(path)-1]
@@ -51,4 +50,35 @@ func getPathLen(path []string) int {
 	}
 
 	return sum
+}
+
+// var partition = partitionStandard
+func partitionStandard(s string) [][]string {
+	res := make([][]string, 0)
+	path := make([]string, 0)
+	var backtracking func(index int)
+	backtracking = func(index int) {
+		//log.Println("index is", index, "path is", path)
+		if index == len(s) {
+			value := make([]string, len(path))
+			copy(value, path)
+			res = append(res, value)
+			return
+		}
+
+		for i := index; i < len(s); i++ {
+			newValue := s[index : i+1]
+			if !isPalindrome(newValue) { // 不是回文字符串
+				continue
+			}
+			path = append(path, newValue)
+			backtracking(i + 1)
+			path = path[:len(path)-1]
+		}
+	}
+
+	backtracking(0)
+
+	log.Println(res)
+	return res
 }
