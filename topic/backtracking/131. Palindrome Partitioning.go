@@ -59,6 +59,7 @@ func partitionStandard(s string) [][]string {
 	var backtracking func(index int)
 	backtracking = func(index int) {
 		//log.Println("index is", index, "path is", path)
+		// index 表示开始切割的位置，如果 >= len(s) 说明已经来到了末尾
 		if index == len(s) {
 			value := make([]string, len(path))
 			copy(value, path)
