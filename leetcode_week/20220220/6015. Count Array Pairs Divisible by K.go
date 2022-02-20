@@ -6,6 +6,7 @@ import (
 )
 
 // todo: 超时 92/115
+// https://leetcode-cn.com/problems/count-array-pairs-divisible-by-k/
 func coutPairs(nums []int, k int) int64 {
 	var count int64 = 0
 	path := make([]int, 0)
