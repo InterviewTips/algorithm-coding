@@ -33,7 +33,7 @@ func restoreIpAddresses(s string) []string {
 			newValue := s[index : i+1]
 			if !isValidIP(newValue) {
 				// continue
-				// 其实后面的都不合法了 可以直接 break
+				// 其实后面横向的都不合法了 可以直接 break
 				break
 			}
 			path = append(path, newValue)
