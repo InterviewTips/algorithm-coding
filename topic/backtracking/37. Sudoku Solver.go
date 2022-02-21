@@ -1,5 +1,11 @@
 package backtracking
 
+import (
+	"fmt"
+	"log"
+	"strings"
+)
+
 func solveSudoku(board [][]byte) {
 	var backtracking func() bool
 	backtracking = func() bool {
@@ -17,7 +23,11 @@ func solveSudoku(board [][]byte) {
 						board[i][j] = '.'
 					}
 				}
-				// 9 个数字都没有办法填充这一个格
+				// 走到这里 9 个数字都没有办法填充这一个格
+				// 有可能出现的一种情况就是有一些已经填充好的格子 后面再去推就有问题 所以就可能出现这种
+				// 9 个数字都没有办法填充这一个格的情况
+				printSudoku(board)
+				log.Printf("索引 row: %v, col: %v 无法填充\n", i, j)
 				return false
 			}
 		}
@@ -27,6 +37,13 @@ func solveSudoku(board [][]byte) {
 
 	backtracking()
 	return
+}
+
+func printSudoku(board [][]byte) {
+	for i := 0; i < len(board); i++ {
+		value := strings.Join(strings.Split(string(board[i]), ""), " ")
+		fmt.Println(value)
+	}
 }
 
 func isValidNum(row int, col int, char byte, board [][]byte) bool {
