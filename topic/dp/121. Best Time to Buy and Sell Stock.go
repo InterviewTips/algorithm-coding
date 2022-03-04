@@ -3,7 +3,7 @@ package dp
 import "log"
 
 func maxProfit(prices []int) int {
-	// res[j] =
+	// 只能买入一次
 	res := make([]int, len(prices))
 	min := prices[0]
 	for i := 1; i < len(prices); i++ {
