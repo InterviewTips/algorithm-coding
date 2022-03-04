@@ -2,7 +2,7 @@ package dp
 
 func lengthOfLIS(nums []int) int {
 	res := make([]int, len(nums))
-	// res[i] 表示包含 j 索引下标最长上升子序列长度
+	// res[i] 表示包含 j 索引下标最长上升子序列长度 注意最大的并不一定是 res[len(nums)-1]
 	// 初始化至少是一
 	for i := 0; i < len(res); i++ {
 		res[i] = 1
