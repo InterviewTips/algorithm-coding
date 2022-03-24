@@ -1,6 +1,6 @@
 package iteration
 
-import "github.com/InterviewTips/algorithm-coding/topic/binary_tree"
+import "algorithm/topic/binary_tree"
 
 type TreeNode = binary_tree.TreeNode
 

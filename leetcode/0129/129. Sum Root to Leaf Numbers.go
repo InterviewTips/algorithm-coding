@@ -1,6 +1,6 @@
 package _129
 
-import "github.com/InterviewTips/algorithm-coding/guns"
+import "algorithm/guns"
 
 type TreeNode = guns.TreeNode
 

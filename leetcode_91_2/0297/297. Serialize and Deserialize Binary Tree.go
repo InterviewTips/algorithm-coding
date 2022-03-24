@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 )
 
 type TreeNode = guns.TreeNode

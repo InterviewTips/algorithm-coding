@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/InterviewTips/algorithm-coding/topic/binary_tree"
+	"algorithm/topic/binary_tree"
 )
 
 func Test_postorderTraversal(t *testing.T) {

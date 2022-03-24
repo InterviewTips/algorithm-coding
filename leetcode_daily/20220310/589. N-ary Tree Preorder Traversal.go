@@ -1,6 +1,6 @@
 package _0220310
 
-import "github.com/InterviewTips/algorithm-coding/topic/binary_tree"
+import "algorithm/topic/binary_tree"
 
 type Node = binary_tree.Node
 

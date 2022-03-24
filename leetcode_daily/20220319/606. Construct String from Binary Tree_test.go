@@ -3,7 +3,7 @@ package _0220319
 import (
 	"testing"
 
-	"github.com/InterviewTips/algorithm-coding/topic/binary_tree"
+	"algorithm/topic/binary_tree"
 )
 
 func Test_tree2str(t *testing.T) {

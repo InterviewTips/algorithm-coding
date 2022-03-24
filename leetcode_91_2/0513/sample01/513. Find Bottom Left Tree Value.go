@@ -1,6 +1,6 @@
 package sample01
 
-import "github.com/InterviewTips/algorithm-coding/guns"
+import "algorithm/guns"
 
 type Value struct {
 	maxLevel int

@@ -1,6 +1,6 @@
 package _987
 
-import "github.com/InterviewTips/algorithm-coding/guns"
+import "algorithm/guns"
 
 /**
  * Definition for a binary tree node.

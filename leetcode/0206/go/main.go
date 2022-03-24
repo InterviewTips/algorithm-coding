@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 )
 
 /**

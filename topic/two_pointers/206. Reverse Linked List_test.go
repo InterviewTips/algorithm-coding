@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 )
 
 func Test_reverseList(t *testing.T) {

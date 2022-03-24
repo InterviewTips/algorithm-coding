@@ -1,7 +1,7 @@
 package leetcode
 
 import (
-	"github.com/InterviewTips/algorithm-coding/topic/linkedlist"
+	"algorithm/topic/linkedlist"
 	"sort"
 )
 

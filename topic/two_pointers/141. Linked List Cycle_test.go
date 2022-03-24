@@ -3,7 +3,7 @@ package two_pointers
 import (
 	"testing"
 
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 )
 
 func Test_hasCycle(t *testing.T) {

@@ -3,7 +3,7 @@ package _234
 import (
 	"testing"
 
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 	"github.com/bmizerany/assert"
 )
 

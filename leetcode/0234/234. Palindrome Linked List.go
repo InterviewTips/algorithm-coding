@@ -1,6 +1,6 @@
 package _234
 
-import "github.com/InterviewTips/algorithm-coding/guns"
+import "algorithm/guns"
 
 type ListNode = guns.ListNode
 

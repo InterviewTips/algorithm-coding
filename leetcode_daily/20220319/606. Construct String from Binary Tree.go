@@ -3,7 +3,7 @@ package _0220319
 import (
 	"fmt"
 
-	"github.com/InterviewTips/algorithm-coding/topic/binary_tree"
+	"algorithm/topic/binary_tree"
 )
 
 type TreeNode = binary_tree.TreeNode

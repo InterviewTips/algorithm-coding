@@ -1,7 +1,7 @@
 package linkedlist
 
 import (
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 	"log"
 	"reflect"
 	"testing"

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/InterviewTips/algorithm-coding/guns"
+import "algorithm/guns"
 
 type TreeNode = guns.TreeNode // 修改签名，下面的 TreeNode 就不需要变
 

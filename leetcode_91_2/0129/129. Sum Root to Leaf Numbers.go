@@ -1,7 +1,7 @@
 package _129
 
 import (
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 )
 
 type TreeNode = guns.TreeNode

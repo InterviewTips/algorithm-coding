@@ -3,7 +3,7 @@ package _023
 import (
 	"sort"
 
-	"github.com/InterviewTips/algorithm-coding/guns"
+	"algorithm/guns"
 )
 
 type ListNode = guns.ListNode

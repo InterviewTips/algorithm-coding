@@ -1,4 +1,4 @@
-module github.com/InterviewTips/algorithm-coding
+module algorithm
 
 go 1.16
 
