@@ -8,7 +8,8 @@ import (
 
 type ListNode = guns.ListNode
 
-func swapPairs(head *ListNode) *ListNode {
+// var swapPairs = swapPairs1
+func swapPairs1(head *ListNode) *ListNode {
 	last := &ListNode{}
 	last.Next = head
 	prev := last
