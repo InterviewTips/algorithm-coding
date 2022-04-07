@@ -1,7 +1,7 @@
 package linkedlist
 
 import (
-	"algorithm/guns"
+	"algorithm/topic/linkedlist"
 	"log"
 	"reflect"
 	"testing"
@@ -20,10 +20,10 @@ func Test_removeElements(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				head: guns.GenLinkList([]int{1, 2, 6, 3, 4, 5, 6}),
+				head: linkedlist.NewLinkedList([]int{1, 2, 6, 3, 4, 5, 6}),
 				val:  6,
 			},
-			want: guns.GenLinkList([]int{1, 2, 3, 4, 5}),
+			want: linkedlist.NewLinkedList([]int{1, 2, 3, 4, 5}),
 		},
 	}
 	for _, tt := range tests {

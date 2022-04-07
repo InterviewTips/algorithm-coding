@@ -1,8 +1,10 @@
 package linkedlist
 
-import "algorithm/guns"
+import (
+	"algorithm/topic/linkedlist"
+)
 
-type ListNode = guns.ListNode
+type ListNode = linkedlist.ListNode
 
 func removeElements(head *ListNode, val int) *ListNode {
 	// 如果声明了 dummyHead 则应该修改的就是 dummyHead 而不是 head
