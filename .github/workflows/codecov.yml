@@ -21,6 +21,9 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
 
+      - name: gomod
+        run: go mod tidy
+
       - name: run codecov.sh
         run: bash script/codecov.sh
 

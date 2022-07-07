@@ -6,7 +6,5 @@ out/
 
 *.iml
 
-go.sum
-
 coverage.txt
 profile.out
