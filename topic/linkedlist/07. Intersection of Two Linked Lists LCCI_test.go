@@ -16,14 +16,14 @@ func Test_getIntersectionNode(t *testing.T) {
 		want *ListNode
 	}{
 		// todo: 这个测试用例不能这么写 会无法通过 指针指向不同
-		{
-			name: "one",
-			args: args{
-				headA: NewLinkedList([]int{4, 1, 8, 4, 5}),
-				headB: NewLinkedList([]int{5, 0, 1, 8, 4, 5}),
-			},
-			want: NewLinkedList([]int{8, 4, 5}),
-		},
+		//{
+		//	name: "one",
+		//	args: args{
+		//		headA: NewLinkedList([]int{4, 1, 8, 4, 5}),
+		//		headB: NewLinkedList([]int{5, 0, 1, 8, 4, 5}),
+		//	},
+		//	want: NewLinkedList([]int{8, 4, 5}),
+		//},
 		{
 			name: "two",
 			args: args{
