@@ -4,6 +4,7 @@ import (
 	"sort"
 )
 
+// todo: 未通过
 func minimalKSum(nums []int, k int) int64 {
 	sort.SliceStable(nums, func(i, j int) bool {
 		return nums[i] < nums[j]
