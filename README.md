@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [algorithm-coding](#algorithm-coding)
+  - [directory](#directory)
   - [coding time](#coding-time)
   - [stats](#stats)
   - [致谢](#%E8%87%B4%E8%B0%A2)
@@ -11,11 +12,33 @@
 
 ## algorithm-coding
 
-算法练习
+算法题练习
 
-语言: 包括但不限于 Java、Go、Python 等
+### directory 
 
-计划练习: LeetCode、剑指 Offer、AcWing
+```
+.
+├── LICENSE
+├── README.md
+├── acmmode							// acm 模式输入输出练习
+├── acwing							// acwing 相关
+├── guns								// 工具包
+├── jianzhioffer			  // 剑指 offer
+├── lcp									// leetcode lcp
+├── leetcode						// 多年以前随便写的题
+├── leetcode_91_2				// 91 算法第二期
+├── leetcode_daily			// 每日一题
+├── leetcode_hot100 		// 热门题
+├── leetcode_interview  // leetcode 面试题系列
+├── leetcode_mock				// 模拟面试
+├── leetcode_week				// 周赛
+├── nowcoder	 					// 牛客网相关
+├── script						  // codecov 测试覆盖执行脚本
+├── topic								// 代码随想录相关
+└── topic_review				// 代码随想录相关复习，其实应该删除，练习就直接 web 页面 coding 锻炼即可
+```
+
+
 
 ### coding time
 
