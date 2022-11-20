@@ -34,8 +34,7 @@
 ├── leetcode_week	// 周赛
 ├── nowcoder		// 牛客网相关
 ├── script		// codecov 测试覆盖执行脚本
-├── topic		// 代码随想录相关
-└── topic_review	// 代码随想录相关复习，其实应该删除，练习就直接 web 页面 coding 锻炼即可
+└── topic		// 代码随想录相关
 ```
 
 
