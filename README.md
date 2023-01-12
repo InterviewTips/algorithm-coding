@@ -6,13 +6,13 @@
   - [directory](#directory)
   - [coding time](#coding-time)
   - [stats](#stats)
-  - [致谢](#%E8%87%B4%E8%B0%A2)
+  - [acknowledgement](#acknowledgement)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## algorithm-coding
 
-算法题练习
+algorithm from beginner, include leetcode and other websites.
 
 ### directory 
 
@@ -49,6 +49,6 @@
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 
-### 致谢
+### acknowledgement
 
 [<img src="img/jetbrains.png" alt="JetBrains" height="120" />](https://www.jetbrains.com/?from=algorithm-coding)
