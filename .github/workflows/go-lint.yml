@@ -1,0 +1,44 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  golangci-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Go Environment
+        uses: actions/setup-go@v1
+        with:
+          go-version: '1.19.2'
+      - name: Download golangci-lint
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.49.0
+      - name: run lint
+        run: |
+          PATH=${PATH}:$(go env GOPATH)/bin make lint
+  gofmt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Go Environment
+        uses: actions/setup-go@v1
+        with:
+          go-version: '1.19.2'
+      - name: check gofmt
+        run: |
+          diffs=`gofmt -l . | wc -l`
+          count=`echo $diffs | wc -l`          
+          if [[ $count -gt 1 ]]; then
+              echo "Files are not formatted by gofmt:"
+              echo $diffs
+              exit 1
+          fi
