@@ -1,0 +1,57 @@
+name: "leetcode-question-today"
+
+on:
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "0 2 * * *" # 2 + 8 = 10 北京时间上午 10 点
+  workflow_dispatch:
+
+jobs:
+  today:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Checkout External Go Repo
+        uses: actions/checkout@v2
+        with:
+          repository: 'cloud-org/leetcode-question-today'
+          path: 'today'
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.21.3
+
+      - name: run cmd
+        id: log
+        working-directory: ./today
+        run: |
+          go mod tidy
+          go build -o ./main
+          ./main > run.log 2>&1
+          content=$(cat run.log)
+          echo "::set-output name=content::$content"
+
+      - name: Parse log and create issue
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const logContent = `${{ steps.log.outputs.content }}`;
+            const lines = logContent.split('\n');
+            const titleLine = lines.find(line => line.startsWith('Title: '));
+            if (titleLine) {
+              const title = titleLine.replace('Title: ', '');
+              const bodyLines = lines.slice(lines.indexOf(titleLine) + 1, lines.indexOf(titleLine) + 5).join('\n');
+              github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: bodyLines
+              });
+            }
