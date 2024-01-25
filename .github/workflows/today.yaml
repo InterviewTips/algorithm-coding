@@ -49,6 +49,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: title,
-                body: body
+                body: body,
+                labels: ['leetcode']
               });
             }
