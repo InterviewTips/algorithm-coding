@@ -1,11 +1,8 @@
 name: "leetcode-question-today"
 
 on:
-  pull_request:
-    branches:
-      - main
   schedule:
-    - cron: "0 2 * * *" # 2 + 8 = 10 北京时间上午 10 点
+    - cron: "0 1 * * *" # beijing 9am.
   workflow_dispatch:
 
 jobs:
@@ -46,7 +43,7 @@ jobs:
             const lines = logContent.split('\n');
             const titleIndex = lines.findIndex(line => line.startsWith('Title: '));
             if (titleIndex !== -1) {
-              const title = lines[titleIndex].substring('Title: '.length);
+              const title = lines[titleIndex];
               const body = lines.slice(titleIndex + 1, titleIndex + 5).join('\n');
               github.rest.issues.create({
                 owner: context.repo.owner,
