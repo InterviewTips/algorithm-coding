@@ -3,10 +3,10 @@ package _160
 import (
 	"fmt"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	lenA := 0

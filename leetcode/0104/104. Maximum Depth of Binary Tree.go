@@ -1,8 +1,10 @@
 package _104
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func maxDepth(root *TreeNode) int {
 	return subMaxDepth(root)

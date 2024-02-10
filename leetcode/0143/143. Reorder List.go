@@ -1,8 +1,10 @@
 package _143
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func reorderList(head *ListNode) {
 	//边界判定

@@ -1,8 +1,10 @@
 package main
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode // 修改签名，下面的 TreeNode 就不需要变
+type TreeNode = template.TreeNode // 修改签名，下面的 TreeNode 就不需要变
 
 func sumOfLeftLeaves(root *TreeNode) int {
 	//return subSumOfLeftLeaves(root, false, 0)

@@ -18,7 +18,7 @@ type NTreeNode struct {
 	Children []*NTreeNode
 }
 
-//CreateBinaryTree 构造二叉树 leetcode
+// CreateBinaryTree 构造二叉树 leetcode
 func CreateBinaryTree(data []int) *TreeNode {
 	if len(data) == 0 {
 		return nil

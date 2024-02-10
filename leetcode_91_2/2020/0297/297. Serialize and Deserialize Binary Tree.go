@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"strings"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 type Codec struct {
 	s string

@@ -3,10 +3,10 @@ package _023
 import (
 	"sort"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 type Queue struct {
 	element []*ListNode

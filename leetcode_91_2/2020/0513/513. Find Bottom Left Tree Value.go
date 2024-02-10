@@ -1,8 +1,10 @@
 package _513
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func findBottomLeftValue(root *TreeNode) int {
 	var queue []*TreeNode

@@ -28,7 +28,7 @@ func isLongPressedName(name string, typed string) bool {
 	return false
 }
 
-//双指针
+// 双指针
 func isLongPressedNamePlanB(name string, typed string) bool {
 	i, j := 0, 0
 	for j < len(typed) {

@@ -1,8 +1,10 @@
 package _100
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func isSameTree(p *TreeNode, q *TreeNode) bool {
 	if p == nil && q == nil {

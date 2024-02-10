@@ -1,10 +1,10 @@
 package _129
 
 import (
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func sumNumbers(root *TreeNode) int {
 	return sub(root, 0)

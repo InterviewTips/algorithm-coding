@@ -1,7 +1,7 @@
 package main
 
 import (
-	"algorithm/guns"
+	"algorithm/template"
 )
 
 /**
@@ -12,7 +12,7 @@ import (
  * }
  */
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func reverseList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {

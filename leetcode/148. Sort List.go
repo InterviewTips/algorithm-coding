@@ -1,8 +1,9 @@
 package leetcode
 
 import (
-	"algorithm/topic/linkedlist"
 	"sort"
+
+	"algorithm/topic/linkedlist"
 )
 
 type ListNode = linkedlist.ListNode

@@ -42,3 +42,17 @@ jobs:
               echo $diffs
               exit 1
           fi
+  sort-import-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Go Environment
+        uses: actions/setup-go@v3
+        with:
+          go-version: "1.21.3"
+      - name: Sort Import Lint
+        run: make sort-import
+      - name: Check for changes
+        run: |
+          git diff --exit-code || { echo "Go imports revisions detected. Please run make sort-import and commit changes."; exit 1; }

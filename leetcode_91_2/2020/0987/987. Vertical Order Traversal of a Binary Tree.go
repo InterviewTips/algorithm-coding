@@ -1,6 +1,8 @@
 package _987
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
 /**
  * Definition for a binary tree node.
@@ -11,7 +13,7 @@ import "algorithm/guns"
  * }
  */
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func verticalTraversal(root *TreeNode) [][]int {
 	return nil

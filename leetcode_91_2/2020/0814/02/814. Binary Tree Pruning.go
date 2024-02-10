@@ -1,8 +1,10 @@
 package _814
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func pruneTree(root *TreeNode) *TreeNode {
 	if root == nil {

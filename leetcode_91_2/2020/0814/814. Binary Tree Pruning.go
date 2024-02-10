@@ -1,8 +1,10 @@
 package _814
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func pruneTree(root *TreeNode) *TreeNode {
 	if containsOne(root) {
@@ -12,7 +14,7 @@ func pruneTree(root *TreeNode) *TreeNode {
 	}
 }
 
-//containsOne 子树是否包含 1
+// containsOne 子树是否包含 1
 func containsOne(root *TreeNode) bool {
 	if root == nil {
 		return false

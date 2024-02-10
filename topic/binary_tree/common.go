@@ -79,7 +79,7 @@ func LevelOrderLog(root *NTreeNode) {
 	return
 }
 
-//CreateBinaryTree 构造二叉树 leetcode
+// CreateBinaryTree 构造二叉树 leetcode
 func CreateBinaryTree(data []int) *TreeNode {
 	if len(data) == 0 {
 		return nil
@@ -176,7 +176,7 @@ func LevelOrderBinaryTree(root *TreeNode) []int {
 	return res
 }
 
-//PreOrder 前序遍历
+// PreOrder 前序遍历
 func PreOrder(root *TreeNode) {
 	if root != nil {
 		log.Println(root.Val)
@@ -187,7 +187,7 @@ func PreOrder(root *TreeNode) {
 	}
 }
 
-//PostOrder 后序遍历
+// PostOrder 后序遍历
 func PostOrder(root *TreeNode) {
 	if root != nil {
 		PostOrder(root.Left)
@@ -198,7 +198,7 @@ func PostOrder(root *TreeNode) {
 	}
 }
 
-//InOrder 中序遍历
+// InOrder 中序遍历
 func InOrder(root *TreeNode) {
 	if root != nil {
 		InOrder(root.Left)

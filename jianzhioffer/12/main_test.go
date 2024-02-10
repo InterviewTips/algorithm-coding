@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/bmizerany/assert"
 	"testing"
+
+	"github.com/bmizerany/assert"
 )
 
 func TestExist(t *testing.T) {

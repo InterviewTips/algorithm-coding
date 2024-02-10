@@ -1,8 +1,10 @@
 package leetcode_interview
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func removeDuplicateNodes(head *ListNode) *ListNode {
 	if head == nil {

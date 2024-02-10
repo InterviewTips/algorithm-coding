@@ -1,4 +1,4 @@
-package guns
+package template
 
 import "testing"
 

@@ -21,7 +21,7 @@ func strStr(haystack string, needle string) int {
 	return -1
 }
 
-//getNext 前缀表构建
+// getNext 前缀表构建
 func getNext(needle string) []int {
 	next := make([]int, len(needle))
 	j := 0

@@ -1,8 +1,10 @@
 package two_pointers
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func reverseList(head *ListNode) *ListNode {
 	var pre *ListNode

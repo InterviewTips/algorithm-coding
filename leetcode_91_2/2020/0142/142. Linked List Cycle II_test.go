@@ -1,8 +1,10 @@
 package _142
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func detectCycle1(head *ListNode) *ListNode {
 	arr := make(map[*ListNode]int)

@@ -37,7 +37,7 @@ func decodeString(s string) string {
 	return getString(stk)
 }
 
-//getDigits 取出数字
+// getDigits 取出数字
 func getDigits(s string, ptr *int) string {
 	ret := ""
 	for ; s[*ptr] >= '0' && s[*ptr] <= '9'; *ptr++ {
@@ -46,7 +46,7 @@ func getDigits(s string, ptr *int) string {
 	return ret
 }
 
-//getString
+// getString
 func getString(v []string) string {
 	ret := ""
 	for _, s := range v {

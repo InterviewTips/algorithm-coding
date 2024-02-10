@@ -32,7 +32,7 @@ func findAnagrams(s string, p string) []int {
 	return res
 }
 
-//判断是否一致
+// 判断是否一致
 func judge(pMap map[byte]int, pMapOrigin map[byte]int) bool {
 
 	for k := range pMapOrigin {

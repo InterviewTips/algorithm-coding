@@ -1,4 +1,4 @@
-package guns
+package template
 
 // TreeNode 树节点
 type TreeNode struct {
@@ -6,8 +6,6 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
-
-//TODO: gen tree
 
 // ListNode 链表节点
 type ListNode struct {

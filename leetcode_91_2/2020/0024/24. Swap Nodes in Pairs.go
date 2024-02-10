@@ -3,10 +3,10 @@ package _024
 import (
 	"fmt"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 // var swapPairs = swapPairs1
 func swapPairs1(head *ListNode) *ListNode {

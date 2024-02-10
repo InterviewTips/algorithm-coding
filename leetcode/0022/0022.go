@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-//https://leetcode-cn.com/problems/generate-parentheses/solution/gua-hao-sheng-cheng-by-leetcode-solution/
+// https://leetcode-cn.com/problems/generate-parentheses/solution/gua-hao-sheng-cheng-by-leetcode-solution/
 func generateParenthesis(n int) []string {
 	ans := make([]string, 0)
 	backTrack([]string{}, 0, 0, &ans, n)
