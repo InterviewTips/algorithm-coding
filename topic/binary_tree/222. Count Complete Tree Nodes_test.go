@@ -1,10 +1,14 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_countNodes(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -14,7 +18,7 @@ func Test_countNodes(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3, 4, 5, 6}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, 4, 5, 6}),
 			},
 			want: 6,
 		},

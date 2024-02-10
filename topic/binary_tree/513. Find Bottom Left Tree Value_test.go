@@ -1,10 +1,14 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_findBottomLeftValue(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -14,14 +18,14 @@ func Test_findBottomLeftValue(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{2, 1, 3}),
+				root: template.CreateBinaryTree([]int{2, 1, 3}),
 			},
 			want: 1,
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3, 4, Null, 5, 6, Null, Null, 7}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, 4, template.Null, 5, 6, template.Null, template.Null, 7}),
 			},
 			want: 7,
 		},

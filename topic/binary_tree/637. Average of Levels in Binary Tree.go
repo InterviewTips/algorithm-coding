@@ -1,12 +1,14 @@
 package binary_tree
 
+import "algorithm/template"
+
 // 层次遍历的变种 也可以使用深度搜索
-func averageOfLevels(root *TreeNode) []float64 {
+func averageOfLevels(root *template.TreeNode) []float64 {
 	res := make([]float64, 0)
 	if root == nil {
 		return res
 	}
-	treeQueue := make([]*TreeNode, 0)
+	treeQueue := make([]*template.TreeNode, 0)
 	// push root to queue
 	treeQueue = append(treeQueue, root)
 	for len(treeQueue) != 0 {

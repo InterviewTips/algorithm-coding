@@ -1,8 +1,10 @@
 package _0220408
 
-import "algorithm/topic/binary_tree"
+import (
+	"algorithm/template"
+)
 
-type Node = binary_tree.NTreeNode
+type Node = template.NTreeNode
 
 func levelOrder(root *Node) [][]int {
 	res := make([][]int, 0)

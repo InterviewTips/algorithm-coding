@@ -1,8 +1,10 @@
 package iteration
 
-import "algorithm/topic/binary_tree"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 // 中左右 -> 压入栈中的顺序是 右左(中+nil)
 func preorderTraversal(root *TreeNode) []int {

@@ -1,12 +1,14 @@
 package linkedlist
 
+import "algorithm/template"
+
 type MyLinkedList struct {
-	DummyHead *ListNode
+	DummyHead *template.ListNode
 	Length    int
 }
 
 func Constructor() MyLinkedList {
-	return MyLinkedList{DummyHead: &ListNode{}} // 初始化伪节点
+	return MyLinkedList{DummyHead: &template.ListNode{}} // 初始化伪节点
 }
 
 func (l *MyLinkedList) Get(index int) int {
@@ -48,7 +50,7 @@ func (l *MyLinkedList) AddAtIndex(index int, val int) {
 		pre = pre.Next
 		index--
 	}
-	newNode := &ListNode{Val: val}
+	newNode := &template.ListNode{Val: val}
 	newNode.Next = pre.Next
 	pre.Next = newNode
 

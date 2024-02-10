@@ -3,10 +3,10 @@ package _0220319
 import (
 	"fmt"
 
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 func tree2str(root *TreeNode) string {
 

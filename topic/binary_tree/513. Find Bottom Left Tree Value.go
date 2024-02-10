@@ -1,11 +1,13 @@
 package binary_tree
 
-func findBottomLeftValue(root *TreeNode) int {
+import "algorithm/template"
+
+func findBottomLeftValue(root *template.TreeNode) int {
 	if root == nil { // 这种情况理论上不会发生
 		return 0
 	}
 	var res int
-	treeQueue := make([]*TreeNode, 0)
+	treeQueue := make([]*template.TreeNode, 0)
 	// push root to treeQueue
 	treeQueue = append(treeQueue, root)
 	for len(treeQueue) != 0 {

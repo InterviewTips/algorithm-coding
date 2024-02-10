@@ -1,8 +1,10 @@
 package advanced
 
-import "algorithm/topic/binary_tree"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 func preorderTraversal(root *TreeNode) []int {
 	res := make([]int, 0)

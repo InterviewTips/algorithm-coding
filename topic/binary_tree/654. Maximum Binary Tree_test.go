@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_constructMaximumBinaryTree(t *testing.T) {
@@ -12,14 +14,14 @@ func Test_constructMaximumBinaryTree(t *testing.T) {
 	tests := []struct {
 		name string
 		args args
-		want *TreeNode
+		want *template.TreeNode
 	}{
 		{
 			name: "one",
 			args: args{
 				nums: []int{3, 2, 1, 6, 0, 5},
 			},
-			want: CreateBinaryTree([]int{6, 3, 5, Null, 2, 0, Null, Null, 1}),
+			want: template.CreateBinaryTree([]int{6, 3, 5, template.Null, 2, 0, template.Null, template.Null, 1}),
 		},
 	}
 	for _, tt := range tests {

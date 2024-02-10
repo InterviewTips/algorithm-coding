@@ -1,6 +1,8 @@
 package binary_tree
 
-func searchBST(root *TreeNode, val int) *TreeNode {
+import "algorithm/template"
+
+func searchBST(root *template.TreeNode, val int) *template.TreeNode {
 	if root == nil {
 		return nil
 	}

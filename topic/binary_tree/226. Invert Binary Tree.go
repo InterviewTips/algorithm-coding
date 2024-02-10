@@ -1,6 +1,8 @@
 package binary_tree
 
-func invertTree(root *TreeNode) *TreeNode {
+import "algorithm/template"
+
+func invertTree(root *template.TreeNode) *template.TreeNode {
 	if root == nil {
 		return nil
 	}

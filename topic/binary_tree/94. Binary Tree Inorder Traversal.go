@@ -1,12 +1,14 @@
 package binary_tree
 
-func inorderTraversal(root *TreeNode) []int {
+import "algorithm/template"
+
+func inorderTraversal(root *template.TreeNode) []int {
 	res := make([]int, 0)
 	subInorderTraversal(root, &res)
 	return res
 }
 
-func subInorderTraversal(node *TreeNode, res *[]int) { // res 需要指针，不然每次地址发生变化 无法定位到
+func subInorderTraversal(node *template.TreeNode, res *[]int) { // res 需要指针，不然每次地址发生变化 无法定位到
 	if node == nil {
 		return
 	}

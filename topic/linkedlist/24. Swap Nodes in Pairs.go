@@ -1,7 +1,9 @@
 package linkedlist
 
-func swapPairs(head *ListNode) *ListNode {
-	dummyHead := &ListNode{}
+import "algorithm/template"
+
+func swapPairs(head *template.ListNode) *template.ListNode {
+	dummyHead := &template.ListNode{}
 	cur := dummyHead
 	dummyHead.Next = head
 	for cur.Next != nil && cur.Next.Next != nil { // 短路原则 前一个不成立会直接返回

@@ -1,10 +1,10 @@
 package _0220306
 
 import (
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 func createBinaryTree(descriptions [][]int) *TreeNode {
 	data := make(map[int]*TreeNode)

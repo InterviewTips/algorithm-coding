@@ -1,6 +1,8 @@
 package binary_tree
 
-func trimBST(root *TreeNode, low int, high int) *TreeNode {
+import "algorithm/template"
+
+func trimBST(root *template.TreeNode, low int, high int) *template.TreeNode {
 	if root == nil {
 		return nil
 	}

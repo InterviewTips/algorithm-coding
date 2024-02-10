@@ -1,6 +1,8 @@
 package binary_tree
 
-func mergeTrees(root1 *TreeNode, root2 *TreeNode) *TreeNode {
+import "algorithm/template"
+
+func mergeTrees(root1 *template.TreeNode, root2 *template.TreeNode) *template.TreeNode {
 	if root1 == nil && root2 == nil {
 		return nil
 	}

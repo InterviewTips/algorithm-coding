@@ -3,10 +3,10 @@ package dp
 import (
 	"testing"
 
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
-var Null = binary_tree.Null
+var Null = template.Null
 
 func Test_rob3(t *testing.T) {
 	type args struct {
@@ -20,7 +20,7 @@ func Test_rob3(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: binary_tree.CreateBinaryTree([]int{3, 2, 3, Null, 3, Null, 1}),
+				root: template.CreateBinaryTree([]int{3, 2, 3, Null, 3, Null, 1}),
 			},
 			want: 7,
 		},

@@ -1,10 +1,14 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_hasPathSum(t *testing.T) {
 	type args struct {
-		root      *TreeNode
+		root      *template.TreeNode
 		targetSum int
 	}
 	tests := []struct {
@@ -15,7 +19,7 @@ func Test_hasPathSum(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root:      CreateBinaryTree([]int{5, 4, 8, 11, Null, 13, 4, 7, 2, Null, Null, Null, 1}),
+				root:      template.CreateBinaryTree([]int{5, 4, 8, 11, template.Null, 13, 4, 7, 2, template.Null, template.Null, template.Null, 1}),
 				targetSum: 22,
 			},
 			want: true,
@@ -23,7 +27,7 @@ func Test_hasPathSum(t *testing.T) {
 		{
 			name: "two",
 			args: args{
-				root:      CreateBinaryTree([]int{1, 2, 3}),
+				root:      template.CreateBinaryTree([]int{1, 2, 3}),
 				targetSum: 5,
 			},
 			want: false,

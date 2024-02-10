@@ -1,6 +1,8 @@
 package binary_tree
 
-func sumOfLeftLeaves(root *TreeNode) int {
+import "algorithm/template"
+
+func sumOfLeftLeaves(root *template.TreeNode) int {
 	sum := 0
 	if root == nil {
 		return sum
@@ -10,7 +12,7 @@ func sumOfLeftLeaves(root *TreeNode) int {
 }
 
 // 传入的 root 不能为空
-func subSumOfLeftLeaves(root *TreeNode, sum *int) {
+func subSumOfLeftLeaves(root *template.TreeNode, sum *int) {
 	// 左节点不为空 且左节点是叶子节点
 	if root.Left != nil && root.Left.Left == nil &&
 		root.Left.Right == nil {

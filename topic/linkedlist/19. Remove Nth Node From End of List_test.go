@@ -3,41 +3,43 @@ package linkedlist
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_removeNthFromEnd(t *testing.T) {
 	type args struct {
-		head *ListNode
+		head *template.ListNode
 		n    int
 	}
 	tests := []struct {
 		name string
 		args args
-		want *ListNode
+		want *template.ListNode
 	}{
 		{
 			name: "one",
 			args: args{
-				head: NewLinkedList([]int{1, 2, 3, 4, 5}),
+				head: template.NewLinkedList([]int{1, 2, 3, 4, 5}),
 				n:    2,
 			},
-			want: NewLinkedList([]int{1, 2, 3, 5}),
+			want: template.NewLinkedList([]int{1, 2, 3, 5}),
 		},
 		{
 			name: "two",
 			args: args{
-				head: NewLinkedList([]int{1}),
+				head: template.NewLinkedList([]int{1}),
 				n:    1,
 			},
-			want: NewLinkedList([]int{}),
+			want: template.NewLinkedList([]int{}),
 		},
 		{
 			name: "three",
 			args: args{
-				head: NewLinkedList([]int{1, 2}),
+				head: template.NewLinkedList([]int{1, 2}),
 				n:    1,
 			},
-			want: NewLinkedList([]int{1}),
+			want: template.NewLinkedList([]int{1}),
 		},
 	}
 	for _, tt := range tests {

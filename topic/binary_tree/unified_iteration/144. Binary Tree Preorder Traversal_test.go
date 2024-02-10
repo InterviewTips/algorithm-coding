@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
 func Test_preorderTraversal(t *testing.T) {
@@ -19,7 +19,7 @@ func Test_preorderTraversal(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: binary_tree.CreateBinaryTree([]int{1, binary_tree.Null, 2, 3}),
+				root: template.CreateBinaryTree([]int{1, template.Null, 2, 3}),
 			},
 			want: []int{1, 2, 3},
 		},

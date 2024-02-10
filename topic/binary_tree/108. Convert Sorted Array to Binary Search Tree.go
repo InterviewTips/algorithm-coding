@@ -1,6 +1,8 @@
 package binary_tree
 
-func sortedArrayToBST(nums []int) *TreeNode {
+import "algorithm/template"
+
+func sortedArrayToBST(nums []int) *template.TreeNode {
 	if len(nums) == 0 {
 		return nil
 	}
@@ -10,7 +12,7 @@ func sortedArrayToBST(nums []int) *TreeNode {
 	// right := len(nums) // 都可以 右开
 	right := len(nums) - 1 // 右闭
 	mid := left + (right-left)/2
-	root := &TreeNode{Val: nums[mid]}
+	root := &template.TreeNode{Val: nums[mid]}
 	root.Left = sortedArrayToBST(nums[:mid])
 	root.Right = sortedArrayToBST(nums[mid+1:])
 

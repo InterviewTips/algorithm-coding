@@ -1,10 +1,14 @@
 package greedy
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_minCameraCover(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -14,7 +18,7 @@ func Test_minCameraCover(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{0, 0, Null, 0, 0}),
+				root: template.CreateBinaryTree([]int{0, 0, template.Null, 0, 0}),
 			},
 			want: 1,
 		},

@@ -3,18 +3,20 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_lowestCommonAncestor(t *testing.T) {
 	type args struct {
-		root *TreeNode
-		p    *TreeNode
-		q    *TreeNode
+		root *template.TreeNode
+		p    *template.TreeNode
+		q    *template.TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want *TreeNode
+		want *template.TreeNode
 	}{
 		// todo: 此测试用例有问题 指针指向问题
 		//{

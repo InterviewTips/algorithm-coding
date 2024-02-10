@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
 func Test_createBinaryTree(t *testing.T) {
@@ -23,7 +23,7 @@ func Test_createBinaryTree(t *testing.T) {
 					{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1},
 				},
 			},
-			want: binary_tree.CreateBinaryTree([]int{50, 20, 80, 15, 17, 19}),
+			want: template.CreateBinaryTree([]int{50, 20, 80, 15, 17, 19}),
 		},
 	}
 	for _, tt := range tests {

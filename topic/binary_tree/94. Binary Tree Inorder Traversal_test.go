@@ -3,11 +3,13 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_inorderTraversal(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -17,14 +19,14 @@ func Test_inorderTraversal(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, Null, 2, 3}),
+				root: template.CreateBinaryTree([]int{1, template.Null, 2, 3}),
 			},
 			want: []int{1, 3, 2},
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3, 4, 5}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, 4, 5}),
 			},
 			want: []int{4, 2, 5, 1, 3},
 		},

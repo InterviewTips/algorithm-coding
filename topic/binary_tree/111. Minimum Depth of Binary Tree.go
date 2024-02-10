@@ -1,10 +1,12 @@
 package binary_tree
 
-func minDepth(root *TreeNode) int {
+import "algorithm/template"
+
+func minDepth(root *template.TreeNode) int {
 	return subMinDepth(root)
 }
 
-func subMinDepth(root *TreeNode) int {
+func subMinDepth(root *template.TreeNode) int {
 	if root == nil {
 		return 0
 	}
@@ -40,11 +42,11 @@ func subMinDepth(root *TreeNode) int {
 // 使用层次遍历来做
 // 关键点: 左右孩子都为空
 // 提交时需要改函数名 minDepthLevel -> minDepth
-func minDepthLevel(root *TreeNode) int {
+func minDepthLevel(root *template.TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	treeQueue := make([]*TreeNode, 0)
+	treeQueue := make([]*template.TreeNode, 0)
 	// push root
 	treeQueue = append(treeQueue, root)
 	depth := 0

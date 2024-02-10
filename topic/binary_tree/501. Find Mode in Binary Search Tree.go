@@ -1,14 +1,18 @@
 package binary_tree
 
-import "sort"
+import (
+	"sort"
+
+	"algorithm/template"
+)
 
 // 中序遍历 + map 空间貌似用的多
-func findMode(root *TreeNode) []int {
+func findMode(root *template.TreeNode) []int {
 	if root == nil {
 		return nil
 	}
 
-	stack := make([]*TreeNode, 0)
+	stack := make([]*template.TreeNode, 0)
 	stack = append(stack, root)
 	data := make(map[int]int)
 	for len(stack) != 0 {
@@ -60,6 +64,6 @@ func findMode(root *TreeNode) []int {
 
 // var findMode = findModeBST
 // todo: 利用中序遍历有序特性 记住 pre + maxCount 即可
-func findModeBST(root *TreeNode) []int {
+func findModeBST(root *template.TreeNode) []int {
 	return nil
 }

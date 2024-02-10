@@ -1,13 +1,15 @@
 package binary_tree
 
-func hasPathSum(root *TreeNode, targetSum int) bool {
+import "algorithm/template"
+
+func hasPathSum(root *template.TreeNode, targetSum int) bool {
 	if root == nil {
 		return false
 	}
 	return subHasPathSum(root, targetSum-root.Val)
 }
 
-func subHasPathSum(node *TreeNode, value int) bool {
+func subHasPathSum(node *template.TreeNode, value int) bool {
 	// 边界条件 遇到叶子节点 return
 	if node.Left == nil && node.Right == nil && value == 0 {
 		return true

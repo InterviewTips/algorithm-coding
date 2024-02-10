@@ -1,10 +1,12 @@
 package linkedlist
 
+import "algorithm/template"
+
 // 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 //
 // 进阶：你能尝试使用一趟扫描实现吗？
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
-	dummyHead := &ListNode{}
+func removeNthFromEnd(head *template.ListNode, n int) *template.ListNode {
+	dummyHead := &template.ListNode{}
 	dummyHead.Next = head
 	slow := dummyHead
 	fast := head // 这里指向 head fast 就只需要走 n-1 步，如果指向 dummyHead 就需要走 n 步

@@ -1,10 +1,14 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_findTilt(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -14,14 +18,14 @@ func Test_findTilt(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3}),
+				root: template.CreateBinaryTree([]int{1, 2, 3}),
 			},
 			want: 1,
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{4, 2, 9, 3, 5, Null, 7}),
+				root: template.CreateBinaryTree([]int{4, 2, 9, 3, 5, template.Null, 7}),
 			},
 			want: 15,
 		},

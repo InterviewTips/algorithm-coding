@@ -1,10 +1,14 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_minDepth(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -14,14 +18,14 @@ func Test_minDepth(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{3, 9, 20, Null, Null, 15, 7}),
+				root: template.CreateBinaryTree([]int{3, 9, 20, template.Null, template.Null, 15, 7}),
 			},
 			want: 2,
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{2, Null, 3, Null, 4, Null, 5, Null, 6}),
+				root: template.CreateBinaryTree([]int{2, template.Null, 3, template.Null, 4, template.Null, 5, template.Null, 6}),
 			},
 			want: 5,
 		},
@@ -37,7 +41,7 @@ func Test_minDepth(t *testing.T) {
 
 func Test_minDepthLevel(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -47,14 +51,14 @@ func Test_minDepthLevel(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{3, 9, 20, Null, Null, 15, 7}),
+				root: template.CreateBinaryTree([]int{3, 9, 20, template.Null, template.Null, 15, 7}),
 			},
 			want: 2,
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{2, Null, 3, Null, 4, Null, 5, Null, 6}),
+				root: template.CreateBinaryTree([]int{2, template.Null, 3, template.Null, 4, template.Null, 5, template.Null, 6}),
 			},
 			want: 5,
 		},

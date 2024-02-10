@@ -3,30 +3,32 @@ package linkedlist
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_removeElements(t *testing.T) {
 	type args struct {
-		head *ListNode
+		head *template.ListNode
 		val  int
 	}
 	tests := []struct {
 		name string
 		args args
-		want *ListNode
+		want *template.ListNode
 	}{
 		{
 			name: "one",
 			args: args{
-				head: NewLinkedList([]int{1, 2, 6, 3, 4, 5, 6}),
+				head: template.NewLinkedList([]int{1, 2, 6, 3, 4, 5, 6}),
 				val:  6,
 			},
-			want: NewLinkedList([]int{1, 2, 3, 4, 5}),
+			want: template.NewLinkedList([]int{1, 2, 3, 4, 5}),
 		},
 		{
 			name: "two",
 			args: args{
-				head: NewLinkedList([]int{}),
+				head: template.NewLinkedList([]int{}),
 				val:  1,
 			},
 			want: nil,
@@ -34,10 +36,10 @@ func Test_removeElements(t *testing.T) {
 		{
 			name: "three",
 			args: args{
-				head: NewLinkedList([]int{7, 7, 7, 7}),
+				head: template.NewLinkedList([]int{7, 7, 7, 7}),
 				val:  7,
 			},
-			want: NewLinkedList([]int{}),
+			want: template.NewLinkedList([]int{}),
 		},
 	}
 	for _, tt := range tests {

@@ -3,10 +3,10 @@ package leetcode
 import (
 	"sort"
 
-	"algorithm/topic/linkedlist"
+	"algorithm/template"
 )
 
-type ListNode = linkedlist.ListNode
+type ListNode = template.ListNode
 
 func sortList(head *ListNode) *ListNode {
 	// 排序然后重建下

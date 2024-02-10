@@ -3,17 +3,19 @@ package linkedlist
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_getIntersectionNode(t *testing.T) {
 	type args struct {
-		headA *ListNode
-		headB *ListNode
+		headA *template.ListNode
+		headB *template.ListNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want *ListNode
+		want *template.ListNode
 	}{
 		// todo: 这个测试用例不能这么写 会无法通过 指针指向不同
 		//{
@@ -27,8 +29,8 @@ func Test_getIntersectionNode(t *testing.T) {
 		{
 			name: "two",
 			args: args{
-				headA: NewLinkedList([]int{1, 2}),
-				headB: NewLinkedList([]int{3, 4}),
+				headA: template.NewLinkedList([]int{1, 2}),
+				headB: template.NewLinkedList([]int{3, 4}),
 			},
 			want: nil,
 		},

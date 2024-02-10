@@ -1,4 +1,4 @@
-package linkedlist
+package template
 
 type ListNode struct {
 	Val  int

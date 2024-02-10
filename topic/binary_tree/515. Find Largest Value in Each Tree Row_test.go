@@ -3,11 +3,13 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_largestValues(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -17,14 +19,14 @@ func Test_largestValues(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, 3, 2, 5, 3, Null, 9}),
+				root: template.CreateBinaryTree([]int{1, 3, 2, 5, 3, template.Null, 9}),
 			},
 			want: []int{1, 3, 9},
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3}),
+				root: template.CreateBinaryTree([]int{1, 2, 3}),
 			},
 			want: []int{1, 3},
 		},

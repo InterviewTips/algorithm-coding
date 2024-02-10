@@ -1,11 +1,15 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_isSubtree(t *testing.T) {
 	type args struct {
-		root    *TreeNode
-		subRoot *TreeNode
+		root    *template.TreeNode
+		subRoot *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -15,19 +19,19 @@ func Test_isSubtree(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root:    CreateBinaryTree([]int{3, 4, 5, 1, 2}),
-				subRoot: CreateBinaryTree([]int{4, 1, 2}),
+				root:    template.CreateBinaryTree([]int{3, 4, 5, 1, 2}),
+				subRoot: template.CreateBinaryTree([]int{4, 1, 2}),
 			},
 			want: true,
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{
-					1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, 2,
+				root: template.CreateBinaryTree([]int{
+					1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, 2,
 				}),
-				subRoot: CreateBinaryTree([]int{
-					1, Null, 1, Null, 1, Null, 1, Null, 1, Null, 1, 2,
+				subRoot: template.CreateBinaryTree([]int{
+					1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, template.Null, 1, 2,
 				}),
 			},
 			want: true,

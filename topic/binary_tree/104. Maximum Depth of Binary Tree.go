@@ -1,12 +1,14 @@
 package binary_tree
 
+import "algorithm/template"
+
 // 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数
 // 可以层次遍历也可以深度遍历
-func maxDepth(root *TreeNode) int {
+func maxDepth(root *template.TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	treeQueue := make([]*TreeNode, 0)
+	treeQueue := make([]*template.TreeNode, 0)
 	// push root
 	treeQueue = append(treeQueue, root)
 	depth := 0

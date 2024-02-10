@@ -1,7 +1,9 @@
 package binary_tree
 
+import "algorithm/template"
+
 // 自底向上的层序遍历
-func levelOrderBottom(root *TreeNode) [][]int {
+func levelOrderBottom(root *template.TreeNode) [][]int {
 	res := levelOrder(root)
 	subLevelOrderBottom(&res)
 	return res

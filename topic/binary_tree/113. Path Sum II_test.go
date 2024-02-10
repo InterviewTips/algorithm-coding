@@ -3,11 +3,13 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_pathSum(t *testing.T) {
 	type args struct {
-		root      *TreeNode
+		root      *template.TreeNode
 		targetSum int
 	}
 	tests := []struct {
@@ -18,7 +20,7 @@ func Test_pathSum(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root:      CreateBinaryTree([]int{5, 4, 8, 11, Null, 13, 4, 7, 2, Null, Null, 5, 1}),
+				root:      template.CreateBinaryTree([]int{5, 4, 8, 11, template.Null, 13, 4, 7, 2, template.Null, template.Null, 5, 1}),
 				targetSum: 22,
 			},
 			want: [][]int{

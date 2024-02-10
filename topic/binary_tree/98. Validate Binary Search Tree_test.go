@@ -1,10 +1,14 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_isValidBST(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -14,28 +18,28 @@ func Test_isValidBST(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{2, 1, 3}),
+				root: template.CreateBinaryTree([]int{2, 1, 3}),
 			},
 			want: true,
 		},
 		{
 			name: "节点值不能重复",
 			args: args{
-				root: CreateBinaryTree([]int{2, 2, 2}),
+				root: template.CreateBinaryTree([]int{2, 2, 2}),
 			},
 			want: false,
 		},
 		{
 			name: "右子树没有满足需求",
 			args: args{
-				root: CreateBinaryTree([]int{5, 4, 6, Null, Null, 3, 7}),
+				root: template.CreateBinaryTree([]int{5, 4, 6, template.Null, template.Null, 3, 7}),
 			},
 			want: false,
 		},
 		{
 			name: "err",
 			args: args{
-				root: CreateBinaryTree([]int{120, 70, 140, 50, 100, 130, 160, 20, 55, 75, 110, 119, 135, 150, 200}),
+				root: template.CreateBinaryTree([]int{120, 70, 140, 50, 100, 130, 160, 20, 55, 75, 110, 119, 135, 150, 200}),
 			},
 			want: false,
 		},
@@ -51,7 +55,7 @@ func Test_isValidBST(t *testing.T) {
 
 func Test_isValidBSTIteration(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -61,14 +65,14 @@ func Test_isValidBSTIteration(t *testing.T) {
 		{
 			name: "右子树没有满足需求",
 			args: args{
-				root: CreateBinaryTree([]int{5, 4, 6, Null, Null, 3, 7}),
+				root: template.CreateBinaryTree([]int{5, 4, 6, template.Null, template.Null, 3, 7}),
 			},
 			want: false,
 		},
 		{
 			name: "err",
 			args: args{
-				root: CreateBinaryTree([]int{120, 70, 140, 50, 100, 130, 160, 20, 55, 75, 110, 119, 135, 150, 200}),
+				root: template.CreateBinaryTree([]int{120, 70, 140, 50, 100, 130, 160, 20, 55, 75, 110, 119, 135, 150, 200}),
 			},
 			want: false,
 		},

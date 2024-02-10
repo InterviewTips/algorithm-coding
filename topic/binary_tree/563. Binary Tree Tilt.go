@@ -1,6 +1,8 @@
 package binary_tree
 
-func findTilt(root *TreeNode) int {
+import "algorithm/template"
+
+func findTilt(root *template.TreeNode) int {
 	if root == nil {
 		return 0
 	}
@@ -11,7 +13,7 @@ func findTilt(root *TreeNode) int {
 }
 
 // 返回值表示当前节点的左右子树+当前节点的值
-func subFindTilt(node *TreeNode, sum *int) int {
+func subFindTilt(node *template.TreeNode, sum *int) int {
 	if node == nil {
 		return 0
 	}

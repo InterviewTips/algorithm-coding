@@ -3,11 +3,13 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_levelOrder(t *testing.T) {
 	type args struct {
-		root *TreeNode
+		root *template.TreeNode
 	}
 	tests := []struct {
 		name string
@@ -17,7 +19,7 @@ func Test_levelOrder(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{3, 9, 20, Null, Null, 15, 7}),
+				root: template.CreateBinaryTree([]int{3, 9, 20, template.Null, template.Null, 15, 7}),
 			},
 			want: [][]int{
 				{3},

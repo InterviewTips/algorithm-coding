@@ -1,10 +1,10 @@
 package dp
 
 import (
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 // var rob = rob3
 func rob3(root *TreeNode) int {
