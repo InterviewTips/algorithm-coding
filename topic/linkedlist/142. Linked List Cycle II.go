@@ -1,10 +1,8 @@
 package linkedlist
 
-import "algorithm/template"
-
 // a + n * (b + c) + b = 2 * (a + b)
 // fast 每次走两步，slow 每次走一步
-func detectCycle(head *template.ListNode) *template.ListNode {
+func detectCycle(head *ListNode) *ListNode {
 	slow := head
 	fast := head
 	for fast != nil {

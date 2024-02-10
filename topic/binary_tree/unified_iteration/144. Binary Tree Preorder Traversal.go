@@ -1,8 +1,6 @@
 package iteration
 
-import (
-	"algorithm/template"
-)
+import "algorithm/template"
 
 type TreeNode = template.TreeNode
 

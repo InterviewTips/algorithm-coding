@@ -9,13 +9,13 @@ import (
 
 func Test_removeNthFromEnd(t *testing.T) {
 	type args struct {
-		head *template.ListNode
+		head *ListNode
 		n    int
 	}
 	tests := []struct {
 		name string
 		args args
-		want *template.ListNode
+		want *ListNode
 	}{
 		{
 			name: "one",

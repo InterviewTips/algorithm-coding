@@ -1,14 +1,12 @@
 package binary_tree
 
-import "algorithm/template"
-
-func postorderTraversal(root *template.TreeNode) []int {
+func postorderTraversal(root *TreeNode) []int {
 	res := make([]int, 0)
 	subPostorderTraversal(root, &res)
 	return res
 }
 
-func subPostorderTraversal(node *template.TreeNode, res *[]int) {
+func subPostorderTraversal(node *TreeNode, res *[]int) {
 	if node == nil {
 		return
 	}

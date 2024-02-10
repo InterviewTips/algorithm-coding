@@ -1,14 +1,12 @@
 package binary_tree
 
-import "algorithm/template"
-
-func constructMaximumBinaryTree(nums []int) *template.TreeNode {
+func constructMaximumBinaryTree(nums []int) *TreeNode {
 	if len(nums) == 0 {
 		return nil
 	}
 
 	index := getNumsMaxIndex(nums)
-	root := &template.TreeNode{Val: nums[index]}
+	root := &TreeNode{Val: nums[index]}
 	root.Left = constructMaximumBinaryTree(nums[:index])
 	root.Right = constructMaximumBinaryTree(nums[index+1:])
 

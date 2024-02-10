@@ -8,8 +8,8 @@ import (
 
 func Test_isSubtree(t *testing.T) {
 	type args struct {
-		root    *template.TreeNode
-		subRoot *template.TreeNode
+		root    *TreeNode
+		subRoot *TreeNode
 	}
 	tests := []struct {
 		name string

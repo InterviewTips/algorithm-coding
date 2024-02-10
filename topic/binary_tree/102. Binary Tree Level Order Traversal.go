@@ -1,16 +1,14 @@
 package binary_tree
 
-import "algorithm/template"
-
 // 给你二叉树的根节点 root
 // 返回其节点值的层序遍历（即逐层地，从左到右访问所有节点）。
 // 关键点 使用队列
-func levelOrder(root *template.TreeNode) [][]int {
+func levelOrder(root *TreeNode) [][]int {
 	res := make([][]int, 0)
 	if root == nil {
 		return res
 	}
-	treeQueue := make([]*template.TreeNode, 0)
+	treeQueue := make([]*TreeNode, 0)
 	// push root
 	treeQueue = append(treeQueue, root)
 	for len(treeQueue) != 0 {

@@ -9,13 +9,13 @@ import (
 
 func Test_searchBST(t *testing.T) {
 	type args struct {
-		root *template.TreeNode
+		root *TreeNode
 		val  int
 	}
 	tests := []struct {
 		name string
 		args args
-		want *template.TreeNode
+		want *TreeNode
 	}{
 		{
 			name: "one",

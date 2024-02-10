@@ -1,8 +1,6 @@
 package binary_tree
 
-import "algorithm/template"
-
-func lowestCommonAncestor(root, p, q *template.TreeNode) *template.TreeNode {
+func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	if root == nil || root == q || root == p {
 		return root
 	}

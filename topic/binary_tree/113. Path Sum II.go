@@ -1,8 +1,6 @@
 package binary_tree
 
-import "algorithm/template"
-
-func pathSum(root *template.TreeNode, targetSum int) [][]int {
+func pathSum(root *TreeNode, targetSum int) [][]int {
 	res := make([][]int, 0)
 	if root == nil {
 		return res
@@ -13,7 +11,7 @@ func pathSum(root *template.TreeNode, targetSum int) [][]int {
 	return res
 }
 
-func subPathSum(node *template.TreeNode, path *[]int, res *[][]int, value int) {
+func subPathSum(node *TreeNode, path *[]int, res *[][]int, value int) {
 	if node.Left == nil && node.Right == nil && value == 0 {
 		// add path to res
 		// path 的对应地址的内容会被修改 所以要重新引出一个

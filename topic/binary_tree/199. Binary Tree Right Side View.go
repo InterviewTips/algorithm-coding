@@ -1,14 +1,12 @@
 package binary_tree
 
-import "algorithm/template"
-
 // 层次遍历的变种 rightRes 关键点
-func rightSideView(root *template.TreeNode) []int {
+func rightSideView(root *TreeNode) []int {
 	res := make([]int, 0)
 	if root == nil {
 		return res
 	}
-	treeQueue := make([]*template.TreeNode, 0)
+	treeQueue := make([]*TreeNode, 0)
 	// push root to queue
 	treeQueue = append(treeQueue, root)
 	for len(treeQueue) != 0 {

@@ -1,8 +1,6 @@
 package binary_tree
 
-import "algorithm/template"
-
-func isSubtree(root *template.TreeNode, subRoot *template.TreeNode) bool {
+func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
 	if root == nil && subRoot == nil {
 		return true
 	}

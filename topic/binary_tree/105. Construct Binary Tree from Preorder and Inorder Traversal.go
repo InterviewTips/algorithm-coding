@@ -1,12 +1,10 @@
 package binary_tree
 
-import "algorithm/template"
-
-func buildTree(preorder []int, inorder []int) *template.TreeNode {
+func buildTree(preorder []int, inorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
 	}
-	root := &template.TreeNode{Val: preorder[0]}
+	root := &TreeNode{Val: preorder[0]}
 
 	// 寻找索引
 	var index int

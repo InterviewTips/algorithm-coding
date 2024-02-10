@@ -2,14 +2,16 @@ package greedy
 
 import "algorithm/template"
 
-func minCameraCover(root *template.TreeNode) int {
+type TreeNode = template.TreeNode
+
+func minCameraCover(root *TreeNode) int {
 
 	res := 0
 	// 0 无覆盖
 	// 1 有摄像头
 	// 2 有覆盖
-	var postOrder func(node *template.TreeNode) int
-	postOrder = func(node *template.TreeNode) int {
+	var postOrder func(node *TreeNode) int
+	postOrder = func(node *TreeNode) int {
 		if node == nil { // 空节点表示有覆盖
 			return 2
 		}

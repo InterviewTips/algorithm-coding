@@ -1,15 +1,13 @@
 package binary_tree
 
-import "algorithm/template"
-
 // 提交时改名 buildTreePostOrder -> buildTree
 // var buildTree = buildTreePostOrder
-func buildTreePostOrder(inorder []int, postorder []int) *template.TreeNode {
+func buildTreePostOrder(inorder []int, postorder []int) *TreeNode {
 	if len(postorder) == 0 {
 		return nil
 	}
 
-	root := &template.TreeNode{Val: postorder[len(postorder)-1]}
+	root := &TreeNode{Val: postorder[len(postorder)-1]}
 
 	// find index
 	var index int

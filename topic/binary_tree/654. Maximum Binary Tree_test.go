@@ -14,7 +14,7 @@ func Test_constructMaximumBinaryTree(t *testing.T) {
 	tests := []struct {
 		name string
 		args args
-		want *template.TreeNode
+		want *TreeNode
 	}{
 		{
 			name: "one",

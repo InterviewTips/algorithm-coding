@@ -1,8 +1,6 @@
 package binary_tree
 
-import "algorithm/template"
-
-func isSameTree(p *template.TreeNode, q *template.TreeNode) bool {
+func isSameTree(p *TreeNode, q *TreeNode) bool {
 	if p == nil && q == nil {
 		return true
 	}

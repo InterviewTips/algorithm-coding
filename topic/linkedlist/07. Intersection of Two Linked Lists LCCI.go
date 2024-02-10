@@ -1,8 +1,6 @@
 package linkedlist
 
-import "algorithm/template"
-
-func getIntersectionNode(headA, headB *template.ListNode) *template.ListNode {
+func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	headALen := 0
 	tmpA := headA
 	for tmpA != nil {

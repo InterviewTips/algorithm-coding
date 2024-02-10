@@ -9,13 +9,13 @@ import (
 
 func Test_getIntersectionNode(t *testing.T) {
 	type args struct {
-		headA *template.ListNode
-		headB *template.ListNode
+		headA *ListNode
+		headB *ListNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want *template.ListNode
+		want *ListNode
 	}{
 		// todo: 这个测试用例不能这么写 会无法通过 指针指向不同
 		//{

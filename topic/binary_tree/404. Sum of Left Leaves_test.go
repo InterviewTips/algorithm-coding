@@ -8,7 +8,7 @@ import (
 
 func Test_sumOfLeftLeaves(t *testing.T) {
 	type args struct {
-		root *template.TreeNode
+		root *TreeNode
 	}
 	tests := []struct {
 		name string

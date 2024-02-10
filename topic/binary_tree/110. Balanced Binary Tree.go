@@ -1,15 +1,13 @@
 package binary_tree
 
-import "algorithm/template"
-
-func isBalanced(root *template.TreeNode) bool {
+func isBalanced(root *TreeNode) bool {
 	if getDepth(root) == -1 {
 		return false
 	}
 	return true
 }
 
-func getDepth(node *template.TreeNode) int {
+func getDepth(node *TreeNode) int {
 	if node == nil {
 		return 0
 	}

@@ -9,13 +9,13 @@ import (
 
 func Test_mergeTrees(t *testing.T) {
 	type args struct {
-		root1 *template.TreeNode
-		root2 *template.TreeNode
+		root1 *TreeNode
+		root2 *TreeNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want *template.TreeNode
+		want *TreeNode
 	}{
 		{
 			name: "one",

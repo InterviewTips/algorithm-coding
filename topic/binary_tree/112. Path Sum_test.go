@@ -8,7 +8,7 @@ import (
 
 func Test_hasPathSum(t *testing.T) {
 	type args struct {
-		root      *template.TreeNode
+		root      *TreeNode
 		targetSum int
 	}
 	tests := []struct {

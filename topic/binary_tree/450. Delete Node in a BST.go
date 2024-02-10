@@ -1,8 +1,6 @@
 package binary_tree
 
-import "algorithm/template"
-
-func deleteNode(root *template.TreeNode, key int) *template.TreeNode {
+func deleteNode(root *TreeNode, key int) *TreeNode {
 	if root == nil {
 		return nil
 	}

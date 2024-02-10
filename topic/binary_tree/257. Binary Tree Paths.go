@@ -3,11 +3,9 @@ package binary_tree
 import (
 	"bytes"
 	"fmt"
-
-	"algorithm/template"
 )
 
-func binaryTreePaths(root *template.TreeNode) []string {
+func binaryTreePaths(root *TreeNode) []string {
 	res := make([]string, 0)
 	if root == nil {
 		return res
@@ -20,7 +18,7 @@ func binaryTreePaths(root *template.TreeNode) []string {
 }
 
 // node 必不可能是 nil 条件已经限制
-func subBinaryTreePaths(node *template.TreeNode, path *[]int, res *[]string) {
+func subBinaryTreePaths(node *TreeNode, path *[]int, res *[]string) {
 	// 先 push 到 path 先
 	*path = append(*path, node.Val)
 	// 判断是否叶子节点

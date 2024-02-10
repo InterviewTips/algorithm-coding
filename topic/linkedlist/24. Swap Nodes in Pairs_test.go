@@ -9,12 +9,12 @@ import (
 
 func Test_swapPairs(t *testing.T) {
 	type args struct {
-		head *template.ListNode
+		head *ListNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want *template.ListNode
+		want *ListNode
 	}{
 		{
 			name: "one",

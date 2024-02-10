@@ -1,14 +1,12 @@
 package binary_tree
 
-import "algorithm/template"
-
 // 层次遍历变种
-func zigzagLevelOrder(root *template.TreeNode) [][]int {
+func zigzagLevelOrder(root *TreeNode) [][]int {
 	res := make([][]int, 0)
 	if root == nil {
 		return res
 	}
-	treeQueue := make([]*template.TreeNode, 0)
+	treeQueue := make([]*TreeNode, 0)
 	// push root
 	treeQueue = append(treeQueue, root)
 	positive := true

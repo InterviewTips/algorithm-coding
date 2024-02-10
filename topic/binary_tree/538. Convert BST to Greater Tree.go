@@ -1,9 +1,7 @@
 package binary_tree
 
-import "algorithm/template"
-
 // todo: 其实就是需要反向中序遍历 后面 review 的时候做一下
-func convertBST(root *template.TreeNode) *template.TreeNode {
+func convertBST(root *TreeNode) *TreeNode {
 	// 中序遍历 算出累加值
 	inorderRes := inorderTraversal(root)
 	data := make(map[int]int) // 值对应累加值
@@ -22,7 +20,7 @@ func convertBST(root *template.TreeNode) *template.TreeNode {
 	return root
 }
 
-func subConvertBST(node *template.TreeNode, data map[int]int) {
+func subConvertBST(node *TreeNode, data map[int]int) {
 	if node == nil {
 		return
 	}

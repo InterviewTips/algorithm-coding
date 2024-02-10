@@ -1,16 +1,14 @@
 package binary_tree
 
-import "algorithm/template"
-
 // 是否是对称的二叉树
-func isSymmetric(root *template.TreeNode) bool {
+func isSymmetric(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
 	return compareTree(root.Left, root.Right)
 }
 
-func compareTree(left *template.TreeNode, right *template.TreeNode) bool {
+func compareTree(left *TreeNode, right *TreeNode) bool {
 	if left == nil && right != nil {
 		return false
 	}

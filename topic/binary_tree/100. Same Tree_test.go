@@ -8,8 +8,8 @@ import (
 
 func Test_isSameTree(t *testing.T) {
 	type args struct {
-		p *template.TreeNode
-		q *template.TreeNode
+		p *TreeNode
+		q *TreeNode
 	}
 	tests := []struct {
 		name string

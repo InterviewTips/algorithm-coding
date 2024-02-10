@@ -2,25 +2,23 @@ package binary_tree
 
 import (
 	"math"
-
-	"algorithm/template"
 )
 
 // 任意两个节点的最小差值，根据中序遍历来
-func getMinimumDifference(root *template.TreeNode) int {
+func getMinimumDifference(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
 
 	min := math.MaxInt64
 	// 关键点 记录先前已经遍历到的最后一个节点 到时候才可以做相减
-	preNode := &template.TreeNode{Val: -1} // 要先初始化 不能直接传 nil 多级指针修改
+	preNode := &TreeNode{Val: -1} // 要先初始化 不能直接传 nil 多级指针修改
 	subGetMinimumDifference(root, &preNode, &min)
 	return min
 }
 
 // 0 <= Node.val <= 105
-func subGetMinimumDifference(node *template.TreeNode, preNode **template.TreeNode, minVal *int) {
+func subGetMinimumDifference(node *TreeNode, preNode **TreeNode, minVal *int) {
 	if node == nil {
 		return
 	}

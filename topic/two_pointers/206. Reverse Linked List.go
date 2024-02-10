@@ -1,8 +1,6 @@
 package two_pointers
 
-import (
-	"algorithm/template"
-)
+import "algorithm/template"
 
 type ListNode = template.ListNode
 
