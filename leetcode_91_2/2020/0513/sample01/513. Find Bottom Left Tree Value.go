@@ -1,13 +1,15 @@
 package sample01
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
 type Value struct {
 	maxLevel int
 	res      int
 }
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func findBottomLeftValue(root *TreeNode) int {
 	v := Value{

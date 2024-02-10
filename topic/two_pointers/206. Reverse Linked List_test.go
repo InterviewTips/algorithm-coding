@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
 func Test_reverseList(t *testing.T) {
@@ -19,9 +19,9 @@ func Test_reverseList(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				head: guns.GenLinkList([]int{1, 2, 3, 4, 5}),
+				head: template.GenLinkList([]int{1, 2, 3, 4, 5}),
 			},
-			want: guns.GenLinkList([]int{5, 4, 3, 2, 1}),
+			want: template.GenLinkList([]int{5, 4, 3, 2, 1}),
 		},
 	}
 	for _, tt := range tests {

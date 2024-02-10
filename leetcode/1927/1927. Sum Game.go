@@ -2,7 +2,7 @@ package _1927
 
 import "log"
 
-//参考题解: https://leetcode-cn.com/problems/sum-game/solution/shu-xue-jie-fa-by-newhar-fqjs/
+// 参考题解: https://leetcode-cn.com/problems/sum-game/solution/shu-xue-jie-fa-by-newhar-fqjs/
 func sumGame(num string) bool {
 	sum1 := 0
 	cnt1 := 0

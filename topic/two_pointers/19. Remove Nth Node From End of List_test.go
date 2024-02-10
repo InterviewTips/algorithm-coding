@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
 func Test_removeNthFromEnd(t *testing.T) {
@@ -20,18 +20,18 @@ func Test_removeNthFromEnd(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				head: guns.GenLinkList([]int{1, 2, 3, 4, 5}),
+				head: template.GenLinkList([]int{1, 2, 3, 4, 5}),
 				n:    2,
 			},
-			want: guns.GenLinkList([]int{1, 2, 3, 5}),
+			want: template.GenLinkList([]int{1, 2, 3, 5}),
 		},
 		{
 			name: "two",
 			args: args{
-				head: guns.GenLinkList([]int{1}),
+				head: template.GenLinkList([]int{1}),
 				n:    1,
 			},
-			want: guns.GenLinkList([]int{}),
+			want: template.GenLinkList([]int{}),
 		},
 	}
 	for _, tt := range tests {

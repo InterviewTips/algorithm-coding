@@ -4,10 +4,10 @@ import (
 	"sort"
 )
 
-//输入: g = [1,2,3], s = [1,1]
-//输出: 1
-//输入: g = [1,2], s = [1,2,3]
-//输出: 2
+// 输入: g = [1,2,3], s = [1,1]
+// 输出: 1
+// 输入: g = [1,2], s = [1,2,3]
+// 输出: 2
 func findContentChildren(g []int, s []int) int {
 	sort.Ints(g)
 	sort.Ints(s)

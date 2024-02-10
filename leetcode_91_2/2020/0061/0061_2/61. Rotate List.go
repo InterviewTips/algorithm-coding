@@ -3,10 +3,10 @@ package _061
 import (
 	"fmt"
 
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func rotateRight(head *ListNode, k int) *ListNode {
 	if head == nil || head.Next == nil {

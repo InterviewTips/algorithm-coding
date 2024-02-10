@@ -1,8 +1,10 @@
 package _144
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func preorderTraversal(root *TreeNode) []int {
 	return sub(root)

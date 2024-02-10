@@ -1,10 +1,10 @@
 package main
 
 import (
-	"algorithm/guns"
+	"algorithm/template"
 )
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func reversePrint(head *ListNode) []int {
 	res := make([]int, 0)

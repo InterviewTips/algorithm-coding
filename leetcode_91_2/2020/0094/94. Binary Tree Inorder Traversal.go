@@ -1,8 +1,10 @@
 package _094
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func inorderTraversal(root *TreeNode) []int {
 	var res []int

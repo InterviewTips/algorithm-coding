@@ -54,7 +54,7 @@ func (m *MapSum) sum(root *Node) int {
 	return res
 }
 
-//StartsWith 找到符合前缀的最后一个节点
+// StartsWith 找到符合前缀的最后一个节点
 func (m *MapSum) StartsWith(prefix string) *Node {
 	cur := m.root
 	for i := 0; i < len(prefix); i++ {

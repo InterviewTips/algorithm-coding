@@ -23,7 +23,7 @@ func firstBadVersion(n int) int {
 	return left
 }
 
-//mock
+// mock
 func isBadVersion(version int) bool {
 	if version == 3 {
 		return false

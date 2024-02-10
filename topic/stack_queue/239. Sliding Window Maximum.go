@@ -17,7 +17,7 @@ func maxSlidingWindow(nums []int, k int) []int {
 	return res
 }
 
-//monotonousQueue 单调队列 队头最大
+// monotonousQueue 单调队列 队头最大
 type monotonousQueue struct {
 	nums []int
 }

@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-//[1,2,2,3,4,4,3]
-//[1,2,2,null,3,null,3]
-//[]
+// [1,2,2,3,4,4,3]
+// [1,2,2,null,3,null,3]
+// []
 func TestIsSymmetric(t *testing.T) {
 	t.Run("nil", func(t *testing.T) {
 		r := isSymmetric(nil)
@@ -50,7 +50,7 @@ func TestIsSymmetric(t *testing.T) {
 	})
 }
 
-//TODO:构建树
+// TODO:构建树
 func BuildTree(nums []int) *TreeNode {
 	return nil
 }

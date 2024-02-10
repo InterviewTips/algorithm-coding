@@ -1,6 +1,6 @@
 package _769
 
-//注：序列为 [0..n-1]
+// 注：序列为 [0..n-1]
 func maxChunksToSorted(arr []int) int {
 	max := 0
 	count := 0

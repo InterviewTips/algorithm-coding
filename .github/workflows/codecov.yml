@@ -28,7 +28,7 @@ jobs:
         run: go mod tidy
 
       - name: run codecov.sh
-        run: bash script/codecov.sh
+        run: bash scripts/codecov.sh
 
       - name: Publish to codecov.io
         run: bash <(curl -s https://codecov.io/bash)

@@ -1,8 +1,10 @@
 package _4
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 func numColor(root *TreeNode) int {
 	// 遍历之后进行去重

@@ -3,19 +3,20 @@ package _234
 import (
 	"testing"
 
-	"algorithm/guns"
 	"github.com/bmizerany/assert"
+
+	"algorithm/template"
 )
 
 func Test_isPalindrome(t *testing.T) {
 	assert.Equal(
 		t,
 		false,
-		isPalindrome(guns.GenLinkList([]int{1, 2})),
+		isPalindrome(template.GenLinkList([]int{1, 2})),
 	)
 	assert.Equal(
 		t,
 		true,
-		isPalindrome(guns.GenLinkList([]int{1, 2, 2, 1})),
+		isPalindrome(template.GenLinkList([]int{1, 2, 2, 1})),
 	)
 }

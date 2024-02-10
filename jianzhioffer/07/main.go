@@ -1,8 +1,10 @@
 package main
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = guns.TreeNode
+type TreeNode = template.TreeNode
 
 type tree struct {
 	preorder   []int

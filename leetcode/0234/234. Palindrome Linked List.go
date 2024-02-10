@@ -1,8 +1,10 @@
 package _234
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
-type ListNode = guns.ListNode
+type ListNode = template.ListNode
 
 func isPalindrome(head *ListNode) bool {
 	//使用数组存储

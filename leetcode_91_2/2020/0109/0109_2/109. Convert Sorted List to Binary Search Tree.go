@@ -1,10 +1,12 @@
 package _109
 
-import "algorithm/guns"
+import (
+	"algorithm/template"
+)
 
 type (
-	ListNode = guns.ListNode
-	TreeNode = guns.TreeNode
+	ListNode = template.ListNode
+	TreeNode = template.TreeNode
 )
 
 var h *ListNode
