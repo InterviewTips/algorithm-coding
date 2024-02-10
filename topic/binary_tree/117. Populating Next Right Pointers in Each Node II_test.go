@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_connect2(t *testing.T) {
@@ -19,7 +21,7 @@ func Test_connect2(t *testing.T) {
 			args: args{
 				root: createPerfectTree([]int{1, 2, 3, 4, 5, 6, 7}),
 			},
-			want: []int{1, Null, 2, 3, Null, 4, 5, 6, 7, Null},
+			want: []int{1, template.Null, 2, 3, template.Null, 4, 5, 6, 7, template.Null},
 		},
 	}
 	for _, tt := range tests {

@@ -3,7 +3,7 @@ package _0220319
 import (
 	"testing"
 
-	"algorithm/topic/binary_tree"
+	"algorithm/template"
 )
 
 func Test_tree2str(t *testing.T) {
@@ -18,14 +18,14 @@ func Test_tree2str(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: binary_tree.CreateBinaryTree([]int{1, 2, 3, 4}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, 4}),
 			},
 			want: "1(2(4))(3)",
 		},
 		{
 			name: "two",
 			args: args{
-				root: binary_tree.CreateBinaryTree([]int{1, 2, 3, binary_tree.Null, 4}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, template.Null, 4}),
 			},
 			want: "1(2()(4))(3)",
 		},

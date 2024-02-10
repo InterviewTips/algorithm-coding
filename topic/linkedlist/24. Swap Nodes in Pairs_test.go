@@ -3,6 +3,8 @@ package linkedlist
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_swapPairs(t *testing.T) {
@@ -17,9 +19,9 @@ func Test_swapPairs(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				head: NewLinkedList([]int{1, 2, 3, 4}),
+				head: template.NewLinkedList([]int{1, 2, 3, 4}),
 			},
-			want: NewLinkedList([]int{2, 1, 4, 3}),
+			want: template.NewLinkedList([]int{2, 1, 4, 3}),
 		},
 	}
 	for _, tt := range tests {

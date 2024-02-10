@@ -1,6 +1,10 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_sumOfLeftLeaves(t *testing.T) {
 	type args struct {
@@ -14,7 +18,7 @@ func Test_sumOfLeftLeaves(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{3, 9, 20, Null, Null, 15, 7}),
+				root: template.CreateBinaryTree([]int{3, 9, 20, template.Null, template.Null, 15, 7}),
 			},
 			want: 24,
 		},

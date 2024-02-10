@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_searchBST(t *testing.T) {
@@ -18,10 +20,10 @@ func Test_searchBST(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{4, 2, 7, 1, 3}),
+				root: template.CreateBinaryTree([]int{4, 2, 7, 1, 3}),
 				val:  2,
 			},
-			want: CreateBinaryTree([]int{2, 1, 3}),
+			want: template.CreateBinaryTree([]int{2, 1, 3}),
 		},
 	}
 	for _, tt := range tests {

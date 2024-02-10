@@ -1,8 +1,10 @@
 package _0220321
 
-import "algorithm/topic/binary_tree"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 func findTarget(root *TreeNode, k int) bool {
 	res := make([]int, 0)

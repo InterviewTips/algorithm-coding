@@ -3,6 +3,8 @@ package linkedlist
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_getIntersectionNode(t *testing.T) {
@@ -27,8 +29,8 @@ func Test_getIntersectionNode(t *testing.T) {
 		{
 			name: "two",
 			args: args{
-				headA: NewLinkedList([]int{1, 2}),
-				headB: NewLinkedList([]int{3, 4}),
+				headA: template.NewLinkedList([]int{1, 2}),
+				headB: template.NewLinkedList([]int{3, 4}),
 			},
 			want: nil,
 		},

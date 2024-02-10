@@ -3,11 +3,13 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_postorder(t *testing.T) {
 	type args struct {
-		root *NTreeNode
+		root *template.NTreeNode
 	}
 	tests := []struct {
 		name string
@@ -17,7 +19,7 @@ func Test_postorder(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateNTree([]int{1, Null, 3, 2, 4, Null, 5, 6}),
+				root: template.CreateNTree([]int{1, template.Null, 3, 2, 4, template.Null, 5, 6}),
 			},
 			want: []int{5, 6, 3, 2, 4, 1},
 		},
@@ -33,7 +35,7 @@ func Test_postorder(t *testing.T) {
 
 func Test_postorderIteration(t *testing.T) {
 	type args struct {
-		root *NTreeNode
+		root *template.NTreeNode
 	}
 	tests := []struct {
 		name string
@@ -43,7 +45,7 @@ func Test_postorderIteration(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateNTree([]int{1, Null, 3, 2, 4, Null, 5, 6}),
+				root: template.CreateNTree([]int{1, template.Null, 3, 2, 4, template.Null, 5, 6}),
 			},
 			want: []int{5, 6, 3, 2, 4, 1},
 		},

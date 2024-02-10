@@ -1,13 +1,15 @@
 package binary_tree
 
+import "algorithm/template"
+
 // type NTreeNode = Node
-func preorder(root *NTreeNode) []int {
+func preorder(root *template.NTreeNode) []int {
 	res := make([]int, 0)
 	subPreOrder(root, &res)
 	return res
 }
 
-func subPreOrder(root *NTreeNode, res *[]int) {
+func subPreOrder(root *template.NTreeNode, res *[]int) {
 	if root == nil {
 		return
 	}
@@ -23,13 +25,13 @@ func subPreOrder(root *NTreeNode, res *[]int) {
 
 // type NTreeNode = Node
 // var preorder = preorderIteration
-func preorderIteration(root *NTreeNode) []int {
+func preorderIteration(root *template.NTreeNode) []int {
 	res := make([]int, 0)
 	if root == nil {
 		return res
 	}
 	// 中左右 -> 右左(中+nil)
-	stack := make([]*NTreeNode, 0)
+	stack := make([]*template.NTreeNode, 0)
 	// push root to stack
 	stack = append(stack, root)
 	for len(stack) != 0 {

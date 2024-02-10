@@ -1,6 +1,10 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_isSymmetric(t *testing.T) {
 	type args struct {
@@ -14,14 +18,14 @@ func Test_isSymmetric(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 2, 3, 4, 4, 3}),
+				root: template.CreateBinaryTree([]int{1, 2, 2, 3, 4, 4, 3}),
 			},
 			want: true,
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 2, Null, 3, Null, 3}),
+				root: template.CreateBinaryTree([]int{1, 2, 2, template.Null, 3, template.Null, 3}),
 			},
 			want: false,
 		},

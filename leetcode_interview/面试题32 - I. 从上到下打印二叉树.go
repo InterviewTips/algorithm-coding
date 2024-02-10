@@ -1,8 +1,10 @@
 package leetcode_interview
 
-import "algorithm/topic/binary_tree"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 func levelOrder(root *TreeNode) []int {
 	// 层次遍历

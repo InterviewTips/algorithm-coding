@@ -1,5 +1,7 @@
 package binary_tree
 
+import "algorithm/template"
+
 type PerfectNode struct {
 	Val   int
 	Left  *PerfectNode
@@ -56,13 +58,13 @@ func createPerfectTree(data []int) *PerfectNode {
 	for index < len(data) {
 		tmp := q[0]
 		q = q[1:]
-		if data[index] != Null { // -> left
+		if data[index] != template.Null { // -> left
 			node := &PerfectNode{Val: data[index]}
 			tmp.Left = node
 			q = append(q, node) // add node
 		}
 		index++
-		if index < len(data) && data[index] != Null { // -> right
+		if index < len(data) && data[index] != template.Null { // -> right
 			node := &PerfectNode{Val: data[index]}
 			tmp.Right = node
 			q = append(q, node) // add node
@@ -102,7 +104,7 @@ func levelOrderPerfectNode(root *PerfectNode) []int {
 					node = node.Next
 				}
 				// append nil to levelRes
-				levelRes = append(levelRes, Null)
+				levelRes = append(levelRes, template.Null)
 			}
 		}
 		// push levelRes to res

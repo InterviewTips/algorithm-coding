@@ -3,13 +3,15 @@ package linkedlist
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_detectCycle(t *testing.T) {
 	type args struct {
 		head *ListNode
 	}
-	linkedList := NewLinkedList([]int{3, 2, 0, -4})
+	linkedList := template.NewLinkedList([]int{3, 2, 0, -4})
 	linkedList.Next.Next.Next.Next = linkedList.Next // -4 -> 2
 	tests := []struct {
 		name string

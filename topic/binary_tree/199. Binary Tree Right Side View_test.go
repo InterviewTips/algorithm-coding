@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_rightSideView(t *testing.T) {
@@ -17,7 +19,7 @@ func Test_rightSideView(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3, Null, 5, Null, 4}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, template.Null, 5, template.Null, 4}),
 			},
 			want: []int{1, 3, 4},
 		},

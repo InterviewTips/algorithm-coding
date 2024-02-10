@@ -1,4 +1,4 @@
-package binary_tree
+package template
 
 import (
 	"log"
@@ -57,7 +57,7 @@ func LevelOrderLog(root *NTreeNode) {
 	if root == nil {
 		return
 	}
-	treeQueue := make([]*Node, 0)
+	treeQueue := make([]*NTreeNode, 0)
 	// push root to queue
 	treeQueue = append(treeQueue, root)
 	for len(treeQueue) != 0 {

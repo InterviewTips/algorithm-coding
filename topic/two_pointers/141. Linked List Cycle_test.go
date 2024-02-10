@@ -10,7 +10,7 @@ func Test_hasCycle(t *testing.T) {
 	type args struct {
 		head *ListNode
 	}
-	one := template.GenLinkList([]int{3, 2, 0, -4})
+	one := template.NewLinkedList([]int{3, 2, 0, -4})
 	one.Next.Next.Next.Next = one.Next
 	tests := []struct {
 		name string

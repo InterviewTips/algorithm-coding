@@ -1,6 +1,10 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_getMinimumDifference(t *testing.T) {
 	type args struct {
@@ -14,21 +18,21 @@ func Test_getMinimumDifference(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{4, 2, 6, 1, 3}),
+				root: template.CreateBinaryTree([]int{4, 2, 6, 1, 3}),
 			},
 			want: 1,
 		},
 		{
 			name: "err",
 			args: args{
-				root: CreateBinaryTree([]int{1, 0, 48, Null, Null, 12, 49}),
+				root: template.CreateBinaryTree([]int{1, 0, 48, template.Null, template.Null, 12, 49}),
 			},
 			want: 1,
 		},
 		{
 			name: "err1",
 			args: args{
-				root: CreateBinaryTree([]int{5, 4, 7}),
+				root: template.CreateBinaryTree([]int{5, 4, 7}),
 			},
 			want: 1,
 		},

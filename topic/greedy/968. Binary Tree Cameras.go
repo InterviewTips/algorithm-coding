@@ -1,5 +1,9 @@
 package greedy
 
+import "algorithm/template"
+
+type TreeNode = template.TreeNode
+
 func minCameraCover(root *TreeNode) int {
 
 	res := 0

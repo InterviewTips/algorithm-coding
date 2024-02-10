@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_findMode(t *testing.T) {
@@ -17,14 +19,14 @@ func Test_findMode(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, Null, 2, 2}),
+				root: template.CreateBinaryTree([]int{1, template.Null, 2, 2}),
 			},
 			want: []int{2},
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{2, 1, 5, Null, Null, 4, 5}),
+				root: template.CreateBinaryTree([]int{2, 1, 5, template.Null, template.Null, 4, 5}),
 			},
 			want: []int{5},
 		},

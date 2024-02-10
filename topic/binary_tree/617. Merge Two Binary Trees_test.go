@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_mergeTrees(t *testing.T) {
@@ -18,10 +20,10 @@ func Test_mergeTrees(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root1: CreateBinaryTree([]int{1, 3, 2, 5}),
-				root2: CreateBinaryTree([]int{2, 1, 3, Null, 4, Null, 7}),
+				root1: template.CreateBinaryTree([]int{1, 3, 2, 5}),
+				root2: template.CreateBinaryTree([]int{2, 1, 3, template.Null, 4, template.Null, 7}),
 			},
-			want: CreateBinaryTree([]int{3, 4, 5, 5, 4, Null, 7}),
+			want: template.CreateBinaryTree([]int{3, 4, 5, 5, 4, template.Null, 7}),
 		},
 	}
 	for _, tt := range tests {

@@ -1,12 +1,14 @@
 package binary_tree
 
-func postorder(root *NTreeNode) []int {
+import "algorithm/template"
+
+func postorder(root *template.NTreeNode) []int {
 	res := make([]int, 0)
 	subPostorder(root, &res)
 	return res
 }
 
-func subPostorder(root *NTreeNode, res *[]int) {
+func subPostorder(root *template.NTreeNode, res *[]int) {
 	if root == nil {
 		return
 	}
@@ -22,13 +24,13 @@ func subPostorder(root *NTreeNode, res *[]int) {
 
 // type NTreeNode = Node
 // var postorder = postorderIteration
-func postorderIteration(root *NTreeNode) []int {
+func postorderIteration(root *template.NTreeNode) []int {
 	res := make([]int, 0)
 	if root == nil {
 		return res
 	}
 	// 左右中 -> (中+nil)右左
-	stack := make([]*NTreeNode, 0)
+	stack := make([]*template.NTreeNode, 0)
 	// push root to stack
 	stack = append(stack, root)
 	for len(stack) != 0 {

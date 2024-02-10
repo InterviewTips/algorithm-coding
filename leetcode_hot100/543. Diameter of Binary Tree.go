@@ -1,8 +1,10 @@
 package leetcode_hot100
 
-import "algorithm/topic/binary_tree"
+import (
+	"algorithm/template"
+)
 
-type TreeNode = binary_tree.TreeNode
+type TreeNode = template.TreeNode
 
 func diameterOfBinaryTree(root *TreeNode) int {
 

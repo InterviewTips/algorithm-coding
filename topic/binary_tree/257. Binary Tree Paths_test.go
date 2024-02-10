@@ -3,6 +3,8 @@ package binary_tree
 import (
 	"reflect"
 	"testing"
+
+	"algorithm/template"
 )
 
 func Test_binaryTreePaths(t *testing.T) {
@@ -17,14 +19,14 @@ func Test_binaryTreePaths(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				root: CreateBinaryTree([]int{1, 2, 3, Null, 5}),
+				root: template.CreateBinaryTree([]int{1, 2, 3, template.Null, 5}),
 			},
 			want: []string{"1->2->5", "1->3"},
 		},
 		{
 			name: "two",
 			args: args{
-				root: CreateBinaryTree([]int{1}),
+				root: template.CreateBinaryTree([]int{1}),
 			},
 			want: []string{"1"},
 		},

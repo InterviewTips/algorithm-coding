@@ -1,6 +1,8 @@
 package binary_tree
 
-import "sort"
+import (
+	"sort"
+)
 
 // 中序遍历 + map 空间貌似用的多
 func findMode(root *TreeNode) []int {

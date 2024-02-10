@@ -19,9 +19,9 @@ func Test_reverseList(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				head: template.GenLinkList([]int{1, 2, 3, 4, 5}),
+				head: template.NewLinkedList([]int{1, 2, 3, 4, 5}),
 			},
-			want: template.GenLinkList([]int{5, 4, 3, 2, 1}),
+			want: template.NewLinkedList([]int{5, 4, 3, 2, 1}),
 		},
 	}
 	for _, tt := range tests {

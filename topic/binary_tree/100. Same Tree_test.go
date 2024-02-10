@@ -1,6 +1,10 @@
 package binary_tree
 
-import "testing"
+import (
+	"testing"
+
+	"algorithm/template"
+)
 
 func Test_isSameTree(t *testing.T) {
 	type args struct {
@@ -15,16 +19,16 @@ func Test_isSameTree(t *testing.T) {
 		{
 			name: "one",
 			args: args{
-				p: CreateBinaryTree([]int{1, 2, 3}),
-				q: CreateBinaryTree([]int{1, 2, 3}),
+				p: template.CreateBinaryTree([]int{1, 2, 3}),
+				q: template.CreateBinaryTree([]int{1, 2, 3}),
 			},
 			want: true,
 		},
 		{
 			name: "two",
 			args: args{
-				p: CreateBinaryTree([]int{1, 2}),
-				q: CreateBinaryTree([]int{1, Null, 2}),
+				p: template.CreateBinaryTree([]int{1, 2}),
+				q: template.CreateBinaryTree([]int{1, template.Null, 2}),
 			},
 			want: false,
 		},
