@@ -1,6 +1,6 @@
 package guns
 
-//TreeNode 树节点
+// TreeNode 树节点
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -9,13 +9,13 @@ type TreeNode struct {
 
 //TODO: gen tree
 
-//ListNode 链表节点
+// ListNode 链表节点
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-//GenLinkList
+// GenLinkList 生成链表
 func GenLinkList(nodes []int) *ListNode {
 	p := &ListNode{}
 	q := p

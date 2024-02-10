@@ -3,7 +3,6 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [algorithm-coding](#algorithm-coding)
-  - [directory](#directory)
   - [coding time](#coding-time)
   - [stats](#stats)
   - [acknowledgement](#acknowledgement)
@@ -12,32 +11,8 @@
 
 ## algorithm-coding
 
-algorithm from beginner, include leetcode and other websites.
-
-### directory 
-
-```
-.
-├── LICENSE
-├── README.md
-├── acmmode		// acm 模式输入输出练习
-├── acwing		// acwing 相关
-├── guns		// 工具包
-├── jianzhioffer	// 剑指 offer
-├── lcp			// leetcode lcp
-├── leetcode		// 多年以前随便写的题
-├── leetcode_91_2	// 91 算法第二期
-├── leetcode_daily	// 每日一题
-├── leetcode_hot100	// 热门题
-├── leetcode_interview  // leetcode 面试题系列
-├── leetcode_mock	// 模拟面试
-├── leetcode_week	// 周赛
-├── nowcoder		// 牛客网相关
-├── script		// codecov 测试覆盖执行脚本
-└── topic		// 代码随想录相关
-```
-
-
+The "algorithm-coding" GitHub repository offers a curated collection of coding problems and solutions to aid in interview preparation. 
+It covers essential topics for technical interviews, providing detailed explanations to improve problem-solving skills. 
 
 ### coding time
 
