@@ -5,13 +5,6 @@ type MyStack struct {
 	Queue2 []int
 }
 
-func stackConstructor() MyStack {
-	return MyStack{
-		Queue1: make([]int, 0),
-		Queue2: make([]int, 0),
-	}
-}
-
 func (m *MyStack) Push(x int) {
 	if len(m.Queue2) != 0 {
 		m.Queue2 = append(m.Queue2, x)
