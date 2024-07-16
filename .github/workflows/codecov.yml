@@ -1,4 +1,4 @@
-name: Go Unit Test
+name: Codecov
 
 on:
   push:
@@ -31,4 +31,6 @@ jobs:
         run: bash scripts/codecov.sh
 
       - name: Publish to codecov.io
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: bash <(curl -s https://codecov.io/bash)
