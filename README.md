@@ -4,6 +4,7 @@
 
 - [algorithm-coding](#algorithm-coding)
   - [coding time](#coding-time)
+  - [codecov](#codecov)
   - [stats](#stats)
   - [acknowledgement](#acknowledgement)
 
@@ -17,6 +18,13 @@ It covers essential topics for technical interviews, providing detailed explanat
 ### coding time
 
 ![wakatime](https://wakatime.com/badge/user/01c864c3-99e2-47a2-ad28-cc0f36b02f39/project/19417b50-3182-4aca-8dec-a35aa5133c91.svg)
+
+### codecov
+
+[![codecov](https://codecov.io/github/InterviewTips/algorithm-coding/graph/badge.svg?token=Y099UQ3IBP)](https://codecov.io/github/InterviewTips/algorithm-coding)
+
+[![codecov](https://codecov.io/github/InterviewTips/algorithm-coding/graphs/icicle.svg?token=Y099UQ3IBP)](https://codecov.io/github/InterviewTips/algorithm-coding)
+
 
 ### stats
 
