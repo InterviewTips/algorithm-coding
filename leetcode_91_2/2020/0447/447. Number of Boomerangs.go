@@ -1,7 +1,5 @@
 package _447
 
-import "fmt"
-
 func numberOfBoomerangs(points [][]int) int {
 	res := 0
 	for i := 0; i < len(points); i++ {
@@ -10,7 +8,7 @@ func numberOfBoomerangs(points [][]int) int {
 			if i != j {
 				d := distanceCalc(points[i], points[j])
 				v, ok := distance[d]
-				fmt.Printf("d is %v\n", d)
+				//fmt.Printf("d is %v\n", d)
 				if ok { // 存在
 					res += 2 * v // (v+1) * v - [v * (v-1)] = 2 * v
 					distance[d] += 1

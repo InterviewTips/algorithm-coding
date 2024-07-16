@@ -16,4 +16,12 @@ func TestNumberOfBoomerangs(t *testing.T) {
 		}),
 		"must be 2",
 	)
+	assert.Equal(t, 2,
+		numberOfBoomerangs1([][]int{
+			{0, 0},
+			{1, 0},
+			{2, 0},
+		}),
+		"must be 2",
+	)
 }
